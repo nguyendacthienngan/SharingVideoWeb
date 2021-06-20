@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div id="main">
+    <!-- <div id="main">
       <NavBar></NavBar>
       <Main></Main>
-    </div>
+    </div> -->
     <div id="video-editing">
       <VideoEditing></VideoEditing>
     </div>
@@ -11,15 +11,15 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import Main from './components/Main.vue'
+// import NavBar from './components/NavBar.vue'
+// import Main from './components/Main.vue'
 import VideoEditing from './components/VideoEditing.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar,
-    Main,
+    // NavBar,
+    // Main,
     VideoEditing
   }
 }

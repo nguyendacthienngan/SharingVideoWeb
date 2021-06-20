@@ -1,16 +1,23 @@
 <template>
-    <div class="container">
-        <!-- <VideoFilter></VideoFilter> -->
+    <div>
+        
+        <div class="container">
+            <SideBar></SideBar>
+            <!-- <VideoFilter></VideoFilter> -->
+        </div>
     </div>
+    
 </template>
 
 <script>
 // import VideoFilter from './VideoFiller.vue'
-// export default {
-//   components: {
-//     VideoFilter
-//   }
-// }
+import SideBar from './SideBar/SideBar.vue'
+export default {
+  components: {
+    // VideoFilter
+    SideBar
+  }
+}
 </script>
 
 <style>
