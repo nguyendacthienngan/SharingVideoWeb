@@ -1,16 +1,10 @@
 <template>
-    <div class="row ">
-        <div class="col-md-2 sidebar h-100" >
-            <SideBarDetail></SideBarDetail>
-            <SideBarDetail></SideBarDetail>
-            <SideBarDetail></SideBarDetail>
-            <SideBarDetail></SideBarDetail>
+    <div class="sidebar">
+        <SideBarDetail></SideBarDetail>
+        <SideBarDetail></SideBarDetail>
+        <SideBarDetail></SideBarDetail>
+        <SideBarDetail></SideBarDetail>
 
-        </div>
-        <div class="col-md-10 container">
-            Content
-        </div>
-    
     </div>
 </template>
 

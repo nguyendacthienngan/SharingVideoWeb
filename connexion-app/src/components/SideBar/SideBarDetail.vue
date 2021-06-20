@@ -14,8 +14,8 @@
     .nav-component{
         padding-top: 10px;
         padding-bottom:10px;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
+        border-bottom: 1px solid rgba(196, 196, 196,60);
+        border-right: 1px solid rgba(196, 196, 196,60);
         
     }
     
