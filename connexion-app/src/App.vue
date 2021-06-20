@@ -34,6 +34,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+   url(./assets/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+body{
+  font-family: "Montserrat", Helvetica, Arial;
+}
 @import'~bootstrap/dist/css/bootstrap.css'
 
 </style>

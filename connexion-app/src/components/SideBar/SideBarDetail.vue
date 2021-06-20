@@ -1,11 +1,22 @@
 <template>
-    <div class="d-flex justify-content-center">
-        <div id="logo">
-
+    <div class="text-center nav-component">
+        <div id="logo" class="" >
+            <img src="../../assets/images/Logo.png" width="71px" height="71px" />
         </div>
-        <div>
+        <div class="">
             Logo
         </div>
     </div>
 
 </template>
+
+<style>
+    .nav-component{
+        padding-top: 10px;
+        padding-bottom:10px;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        
+    }
+    
+</style>
