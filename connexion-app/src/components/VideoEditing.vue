@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import VideoPlayer from './VideoPlayer/VideoPlayer.vue'
+import VideoPlayer from './VideoPlayer.vue'
 import SideBar from './SideBar/SideBar.vue'
 export default {
   components: {

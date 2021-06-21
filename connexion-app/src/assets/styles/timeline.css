@@ -1,0 +1,170 @@
+.timeline {
+    position: relative;
+    width: 70%;
+    /* margin: 20px auto; */
+    height: 14px;
+   }
+   .timeline .cm,
+   .timeline .mm {
+    position: absolute;
+    border-left: 1px solid #555;
+    height: 14px;
+    width: 10%;
+   }
+   .timeline .cm:after {
+    position: absolute;
+    bottom: 24px;
+    font: 11px/1 sans-serif;
+   }
+   .timeline .mm {
+    height: 5px;
+   }
+   .timeline .cm:nth-of-type(1) {
+    left: 0%;
+   }
+   .timeline .cm:nth-of-type(1):after {
+    content: "0";
+   }
+   .timeline .cm:nth-of-type(2) {
+    left: 10%;
+   }
+   .timeline .cm:nth-of-type(2):after {
+    content: "1";
+   }
+   .timeline .cm:nth-of-type(3) {
+    left: 20%;
+   }
+   .timeline .cm:nth-of-type(3):after {
+    content: "2";
+   }
+   .timeline .cm:nth-of-type(4) {
+    left: 30%;
+   }
+   .timeline .cm:nth-of-type(4):after {
+    content: "3";
+   }
+   .timeline .cm:nth-of-type(5) {
+    left: 40%;
+   }
+   .timeline .cm:nth-of-type(5):after {
+    content: "4";
+   }
+   .timeline .cm:nth-of-type(6) {
+    left: 50%;
+   }
+   .timeline .cm:nth-of-type(6):after {
+    content: "5";
+   }
+   .timeline .cm:nth-of-type(7) {
+    left: 60%;
+   }
+   .timeline .cm:nth-of-type(7):after {
+    content: "6";
+   }
+   .timeline .cm:nth-of-type(8) {
+    left: 70%;
+   }
+   .timeline .cm:nth-of-type(8):after {
+    content: "7";
+   }
+   .timeline .cm:nth-of-type(9) {
+    left: 80%;
+   }
+   .timeline .cm:nth-of-type(9):after {
+    content: "8";
+   }
+   .timeline .cm:nth-of-type(10) {
+    left: 90%;
+   }
+   .timeline .cm:nth-of-type(10):after {
+    content: "9";
+   }
+   .timeline .mm:nth-of-type(1) {
+    left: 10%;
+   }
+   .timeline .mm:nth-of-type(2) {
+    left: 20%;
+   }
+   .timeline .mm:nth-of-type(3) {
+    left: 30%;
+   }
+   .timeline .mm:nth-of-type(4) {
+    left: 40%;
+   }
+   .timeline .mm:nth-of-type(5) {
+    left: 50%;
+   }
+   .timeline .mm:nth-of-type(6) {
+    left: 60%;
+   }
+   .timeline .mm:nth-of-type(7) {
+    left: 70%;
+   }
+   .timeline .mm:nth-of-type(8) {
+    left: 80%;
+   }
+   .timeline .mm:nth-of-type(9) {
+    left: 90%;
+   }
+   .timeline .mm:nth-of-type(10) {
+    left: 100%;
+   }
+   
+   #mentionme{  
+     text-align:center;
+     margin-top:10%;
+   }
+/* Timeline */
+  .timeline{
+    margin-top: 70px;
+    position: relative;
+  }
+
+   .slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    outline: none; /* Remove outline */
+    margin-top: 30px;
+    padding-top: 40px;
+    background-color: rgba(196,196,196,60%);
+    border-radius: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 200px;
+    width: 40px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    background: url('../images/Selector(1).png');
+    margin-bottom: 50px;
+    /* background: url(Selector.png) #75b4c3; */
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .video-player{
+    margin-right: 15px;
+  }
