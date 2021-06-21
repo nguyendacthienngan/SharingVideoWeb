@@ -1,0 +1,12 @@
+lib/*.js
+lib
+tests/js/*.js
+tests/js/src
+tests/src
+./tests/js/*.js
+./tests/js/src
+./tests/src
+./tests/tests/
+tests/tests/
+tests/*.js
+tests/*.js.map
