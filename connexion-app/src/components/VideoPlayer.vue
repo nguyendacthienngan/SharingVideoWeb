@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="content">
+        <br>
         <div class="row video-controls">
             <div class="col-md row">
-
             </div>
             <div class="col-md row  justify-content-center d-flex ">
                 <img src="../assets/images/Previous.png" class="video-player">
@@ -30,5 +30,5 @@ export default {
 }
 </script>
 <style src="../assets/styles/timeline.css">
-    
+  
 </style>

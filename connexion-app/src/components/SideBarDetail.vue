@@ -1,7 +1,7 @@
 <template>
     <div class="text-center nav-component">
         <div id="logo" class="" >
-            <img src="../../assets/images/Logo.png" width="71px" height="71px" />
+            <img src="../assets/images/Logo.png" width="71px" height="71px" />
         </div>
         <div class="">
             Logo

@@ -13,7 +13,7 @@ h1 {
     background: rgba(0, 0, 0, 0.4);
   }
   
-  video {
+  /* video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -23,7 +23,7 @@ h1 {
     height: auto;
     z-index: -1;
     transform: translateX(-50%) translateY(-50%);
-  }
+  } */
   
   label {
     padding: 8px 16px;

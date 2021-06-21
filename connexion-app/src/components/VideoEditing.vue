@@ -1,25 +1,11 @@
 <template>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 p-0">
           <SideBar></SideBar>
         </div>
-        <div class="col-md-10">
-          <div class="row">
-            <div class="col-md-4 container content">
-              
-                <!-- <VideoFilter></VideoFilter> -->
-            </div>
-            <div class="col-md-8 text-center h-100">
-              <video width="320" height="240" controls class="video">
-                <source src="../assets/videos/Lofi_Lovely.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          <div>
-            <VideoPlayer></VideoPlayer>
-          </div>
+        <div class="col-md-10 p-0">
+          <VideoFilter></VideoFilter>
+          <VideoPlayer></VideoPlayer>
         </div>
        
     </div>
@@ -28,17 +14,17 @@
 
 <script>
 import VideoPlayer from './VideoPlayer.vue'
-import SideBar from './SideBar/SideBar.vue'
+import VideoFilter from './VideoFilter.vue'
+import SideBar from './SideBar.vue'
 export default {
   components: {
     VideoPlayer,
     SideBar,
+    VideoFilter
   }
 }
 </script>
 
 <style>
-  .content{
-    border: 1px solid black;
-  }
+  
 </style>
