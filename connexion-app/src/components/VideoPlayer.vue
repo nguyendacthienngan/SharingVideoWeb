@@ -22,7 +22,8 @@
         
         <div id='timeline' class="timeline slidecontainer">
             <Timeline></Timeline>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="">
+            <!-- <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress> -->
+            <input type="range" min="1" max="100" value="50" class="slider" id='progress-bar' style="">
         </div>
     </div>
 </template>
