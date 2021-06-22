@@ -63,6 +63,8 @@
 
             btnPlayPause.addEventListener("click", onClicked)
             btnPause.addEventListener("click", onClicked)
+
+            player.addEventListener('ended', function() { this.pause(); }, false);	
         }
     }
 </script>
