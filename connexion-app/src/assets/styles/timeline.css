@@ -173,3 +173,12 @@
     border-top: 1px solid rgba(196, 196, 196,60);
     margin: 0;
   }
+
+  #btnPlayPause {
+    cursor: pointer;
+  }
+
+  #btnPause {
+    cursor: pointer;
+    display: none;
+  }

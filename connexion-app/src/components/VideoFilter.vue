@@ -39,7 +39,7 @@
 
       <input type="radio" name="filter" id="combo" checked /> 
       <label for="combo">Combo</label>
-      <Video></Video>
+      <!-- <Video></Video> -->
     </div>
     <div class="col-md-8 text-center">
       <Video></Video>
