@@ -1,0 +1,16 @@
+.right-border{
+    border-right: 1px solid rgba(196, 196, 196,60);
+}
+
+.top-border{
+    border-top: 1px solid rgba(196, 196, 196,60);
+    margin: 0;
+}
+
+#video-element{
+    border-radius: 12px;
+    width: 320px;
+    height: 180px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

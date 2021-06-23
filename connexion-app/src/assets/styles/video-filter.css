@@ -12,19 +12,6 @@ h1 {
     right: 0;
     background: rgba(0, 0, 0, 0.4);
   }
-  
-  /* video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translateX(-50%) translateY(-50%);
-  } */
-  
   label {
     padding: 8px 16px;
     background: rgba(0, 0, 0, 0.9);
@@ -46,10 +33,10 @@ h1 {
     color: gold;
   }
   
-  [id=grayscale]:checked ~ div video {
+  /* [id=grayscale]:checked ~ .pattern video {
     filter: grayscale(1);
   }
-  
+   */
   [id=sepia]:checked ~ div video {
     filter: sepia(1);
   }

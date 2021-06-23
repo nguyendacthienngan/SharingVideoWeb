@@ -1,23 +1,14 @@
 <template>
     <div class="pattern">
-        <video width="320" height="240"  class="video" id="video-element" ref='video' muted>
+        <video class="video" id="video-element" muted>
             <source src="../assets/videos/Lofi_Lovely.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
-
-        <!-- <div id='controls'>
-			<button id='btnReplay' ref='btnReplay' class='replay' title='replay' accesskey="R">Replay</button>	
-			<button id='btnPlayPause' ref='btnPlayPause' class='play' title='play' accesskey="P" >Play</button>
-			<button id='btnStop' ref='btnStop' class='stop' title='stop' accesskey="X">Stop</button>
-            <button id='btnMute' ref='btnMute' class='mute' title='mute'>Mute</button>	
-        </div> -->
     </div>
 </template>
 <script>
-    import Vue from 'vue'
     export default {
-
         mounted() {
             var player       = document.getElementById('video-element');
             var btnPlayPause = document.getElementById('btnPlayPause');
@@ -29,6 +20,17 @@
             var rewind = document.getElementById('rewind')
             var forward = document.getElementById('forward')
             var skipTrack = document.getElementById('skipTrack')
+
+            btnPlayPause.addEventListener("click", onClicked)
+            btnPause.addEventListener("click", onClicked)
+            player.addEventListener('ended', function() { this.pause(); }, false);	
+            player.addEventListener('timeupdate', updateProgressBar, false);
+            progressBar.addEventListener("click", seek);
+
+            quickRestart.addEventListener("click", stopVideo);
+            rewind.addEventListener("click", rewindVideo);
+            forward.addEventListener("click", fastForwardVideo);
+            skipTrack.addEventListener("click", endVideo);
 
             function onClicked(){
                 if (player.paused || player.ended){
@@ -64,17 +66,7 @@
                 buttonToShow.style.display = "block"
             }
 
-            btnPlayPause.addEventListener("click", onClicked)
-            btnPause.addEventListener("click", onClicked)
-            player.addEventListener('ended', function() { this.pause(); }, false);	
-            player.addEventListener('timeupdate', updateProgressBar, false);
-            progressBar.addEventListener("click", seek);
-
-            quickRestart.addEventListener("click", stopVideo);
-            rewind.addEventListener("click", rewindVideo);
-            forward.addEventListener("click", fastForwardVideo);
-            skipTrack.addEventListener("click", endVideo);
-
+           
             function seek(e) {
                 var percent = e.offsetX / this.offsetWidth;
                 player.currentTime = percent * player.duration;

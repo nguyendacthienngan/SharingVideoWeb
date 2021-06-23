@@ -169,11 +169,6 @@
     margin-right: 15px;
   }
 
-  .content{
-    border-top: 1px solid rgba(196, 196, 196,60);
-    margin: 0;
-  }
-
   #btnPlayPause {
     cursor: pointer;
   }

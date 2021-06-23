@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="top-border">
         <br>
         <div class="row video-controls">
             <div class="col-md row">
@@ -11,10 +11,7 @@
                 <img id='btnPause' src="../assets/images/pause.svg" class="video-player col-md row justify-content-center align-self-center" width="50px" height="50px">
                 <img id='forward' src="../assets/images/forward-button.svg" class="video-player col-md row justify-content-center align-self-center" width="30px" height="30px">
                 <img id='skipTrack' src="../assets/images/skip-track.svg" class="video-player col-md row justify-content-center align-self-center" width="30px" height="30px">
-                
             </div>
-            
-           
            <div class="col-md row justify-content-center align-self-center">
                <span id="current-time">00:00:00</span>/
                <span id="duration">00:00:00</span>
