@@ -25,8 +25,11 @@
             var progressBar = document.getElementById('progress-bar');
             var currentTime = document.getElementById('current-time')
             var duration = document.getElementById('duration')
-            // Show loading animation.
-            
+            var quickRestart = document.getElementById('quickRestart')
+            var rewind = document.getElementById('rewind')
+            var forward = document.getElementById('forward')
+            var skipTrack = document.getElementById('skipTrack')
+
             function onClicked(){
                 if (player.paused || player.ended){
                     var playPromise = player.play();
@@ -63,14 +66,14 @@
 
             btnPlayPause.addEventListener("click", onClicked)
             btnPause.addEventListener("click", onClicked)
-
             player.addEventListener('ended', function() { this.pause(); }, false);	
-
-            // Add a listener for the timeupdate event so we can update the progress bar
-
             player.addEventListener('timeupdate', updateProgressBar, false);
-
             progressBar.addEventListener("click", seek);
+
+            quickRestart.addEventListener("click", stopVideo);
+            rewind.addEventListener("click", rewindVideo);
+            forward.addEventListener("click", fastForwardVideo);
+            skipTrack.addEventListener("click", endVideo);
 
             function seek(e) {
                 var percent = e.offsetX / this.offsetWidth;
@@ -102,7 +105,6 @@
             }
             function convertSecondsToHMS(secs)
             {
-                
                 var hourCurrentTime = 0, minCurrentTime = 0, secondCurrentTime = 0
 
                 hourCurrentTime =  Math.floor(secs/3600)
@@ -115,6 +117,34 @@
 
                 return hourCurrentTime + ":" + minCurrentTime + ":" + secondCurrentTime
             }
+            // Stop the current media from playing, and return it to the start position
+            function stopVideo() {
+                player.pause();
+                if (player.currentTime) player.currentTime = 0;
+                changeButtonType(btnPause, btnPlayPause);
+            }
+            function rewindVideo(){
+                player.currentTime -= 10
+                if (player.currentTime == 0)
+                {
+                    player.pause();
+                    changeButtonType(btnPause, btnPlayPause);
+                }
+            }
+            function fastForwardVideo(){
+                player.currentTime += 10
+                if (player.currentTime == player.duration)
+                {
+                    player.pause();
+                    changeButtonType(btnPause, btnPlayPause);
+                }
+            }
+            function endVideo() {
+                player.pause();
+                if (player.currentTime) player.currentTime = player.duration;
+                changeButtonType(btnPause, btnPlayPause);
+            }
+            
         }
     }
 </script>

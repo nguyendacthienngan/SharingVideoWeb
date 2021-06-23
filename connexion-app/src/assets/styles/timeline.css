@@ -190,3 +190,16 @@
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
+#quickRestart{
+  cursor: pointer;
+}
+#rewind{
+  cursor: pointer;
+}
+#forward{
+  cursor: pointer;
+}
+#skipTrack{
+  cursor: pointer;
+}
