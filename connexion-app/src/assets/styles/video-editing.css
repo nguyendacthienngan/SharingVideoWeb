@@ -7,6 +7,14 @@
     margin: 0;
 }
 
+.headline-video{
+    margin-top: 30px;
+}
+
+.video-title .form-control{
+    border: 1px solid #ffffff !important;
+}
+
 #video-element{
     border-radius: 12px;
     width: 320px;

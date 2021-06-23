@@ -42,6 +42,20 @@
       <!-- <Video></Video> -->
     </div>
     <div class="col-md-8 text-center">
+      <div class="row headline-video">
+       
+        <div class="col-md">
+          <div class="input-group video-title">
+            <input type="text" class="form-control" placeholder="Project Name" aria-label="Project Name" aria-describedby="basic-addon1">
+          </div>
+        </div>
+         <div class="col-md">
+          
+        </div>
+        <div class="col-md row justify-content-end">
+          <Button text='Export'></Button>
+        </div>
+      </div>
       <Video></Video>
     </div>
   </div>
@@ -50,9 +64,11 @@
 
 <script>
 import Video from './Video.vue'
+import Button from './Button.vue'
 export default {
   components: {
-    Video
+    Video,
+    Button
   },
   mounted(){
        var player = document.getElementById('video-element');
