@@ -10,6 +10,7 @@
 <script>
     export default {
         mounted() {
+
             var player       = document.getElementById('video-element');
             var btnPlayPause = document.getElementById('btnPlayPause');
             var btnPause = document.getElementById('btnPause');
@@ -21,6 +22,8 @@
             var forward = document.getElementById('forward')
             var skipTrack = document.getElementById('skipTrack')
 
+            var startTime, endTime
+           
             btnPlayPause.addEventListener("click", onClicked)
             btnPause.addEventListener("click", onClicked)
             player.addEventListener('ended', function() { this.pause(); }, false);	
@@ -74,6 +77,10 @@
                 e.target.innerHTML = progressBar.value + '% played';
             }
             // Update the progress bar
+             progressBar.oninput = function() {
+                console.log(progressBar.value)
+            };
+            
             function updateProgressBar() {
                 updateCurrentTimeText()
                

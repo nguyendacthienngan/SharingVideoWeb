@@ -186,6 +186,14 @@
     transform: rotate(180deg);
 }
 
+.rotate90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 #quickRestart{
   cursor: pointer;
 }
@@ -197,4 +205,20 @@
 }
 #skipTrack{
   cursor: pointer;
+}
+
+#scissors{
+  padding-left: 30px;
+  width: 50%;
+
+  
+}
+
+#scissors:hover{
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #F7F7F8;
+  background-color: #F7F7F8;
+  border-radius: 15px;
 }
