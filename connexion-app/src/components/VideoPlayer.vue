@@ -16,7 +16,8 @@
             
            
            <div class="col-md row justify-content-center align-self-center">
-               00:00:00 / 00:00:00
+               <span id="current-time">00:00:00</span>/
+               <span id="duration">00:00:00</span>
             </div>
         </div>
         

@@ -23,6 +23,8 @@
             var btnPlayPause = document.getElementById('btnPlayPause');
             var btnPause = document.getElementById('btnPause');
             var progressBar = document.getElementById('progress-bar');
+            var currentTime = document.getElementById('current-time')
+            var duration = document.getElementById('duration')
             // Show loading animation.
             
             function onClicked(){
@@ -78,12 +80,40 @@
             }
             // Update the progress bar
             function updateProgressBar() {
+                updateCurrentTimeText()
+               
                 // Work out how much of the media has played via the duration and currentTime parameters
                 var percentage = Math.floor((100 / player.duration) * player.currentTime);
                 // Update the progress bar's value
                 progressBar.value = percentage;
                 // Update the progress bar's text (for browsers that don't support the progress element)
                 progressBar.innerHTML = percentage + '% played';
+            }
+            function updateCurrentTimeText(){
+               
+                var totalCurrentTime =  Math.floor(player.currentTime) // seconds
+                var totalDurationTime =  Math.floor(player.duration) // seconds
+                
+                var sCurrentTime = convertSecondsToHMS(totalCurrentTime)
+                var sDurationTime = convertSecondsToHMS(totalDurationTime)
+
+                currentTime.innerHTML = sCurrentTime
+                duration.innerHTML = sDurationTime
+            }
+            function convertSecondsToHMS(secs)
+            {
+                
+                var hourCurrentTime = 0, minCurrentTime = 0, secondCurrentTime = 0
+
+                hourCurrentTime =  Math.floor(secs/3600)
+                minCurrentTime =  Math.floor((secs - hourCurrentTime*3600)/60)
+                secondCurrentTime = (secs - hourCurrentTime*3600 - minCurrentTime*60)
+                
+                if (hourCurrentTime   < 10) {hourCurrentTime   = "0"+hourCurrentTime;}
+                if (minCurrentTime < 10) {minCurrentTime = "0"+minCurrentTime;}
+                if (secondCurrentTime < 10) {secondCurrentTime = "0"+secondCurrentTime;}
+
+                return hourCurrentTime + ":" + minCurrentTime + ":" + secondCurrentTime
             }
         }
     }
