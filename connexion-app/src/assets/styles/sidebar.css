@@ -1,0 +1,71 @@
+/* Side Bar Detail */
+
+
+.p-30{
+    padding: 30px;
+}
+
+
+/* Side Bar */
+#sidebar{
+    
+}
+.video-editing{
+    display: flex;
+}
+@media only screen and (max-width: 576px) {
+    #logo {
+        width: 41px !important;
+        height: 41px !important;
+    }
+    .hide-for-small-screen{
+        visibility: hidden;
+    }
+    #sidebar {
+        display: flex;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        z-index: 99999;
+        background-color: white;
+        border-bottom: 1px solid rgba(196, 196, 196,60);
+        
+        width: 100%;
+        max-width: 100%;
+        width: 100vw;
+    }
+    .video-editing{
+        display: block;
+    }
+    .nav-component{
+        height: 100%;
+        padding: 0px;
+    }
+
+    #menuToggle{
+        
+    }
+    #menuToggle span
+    {
+        display: block;
+        width: 22px;
+        height: 1px;
+        margin-bottom: 5px;
+        position: relative;
+        
+        background: black;
+        border-radius: 3px;
+        
+        z-index: 1;
+        
+    }
+  }
+
+@media only screen and (min-width: 576px){
+    .nav-component{
+        padding: 30px;
+        border-bottom: 1px solid rgba(196, 196, 196,60);
+        border-right: 1px solid rgba(196, 196, 196,60);
+    }
+}

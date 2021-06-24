@@ -1,12 +1,6 @@
 <template>
-    <div class="d-flex">
-      <nav id="sidebar">
-        <SideBarDetail filename="Logo.png"></SideBarDetail>
-        <SideBarDetail filename="Add-Icon.png" text="Create"></SideBarDetail>
-        <SideBarDetail filename="Folder-Icon.png" text="My Media"></SideBarDetail>
-        <SideBarDetail filename="Record-Icon.png" text="Record"></SideBarDetail>
-        <SideBarDetail filename="Filter-Icon.png" text="Filter"></SideBarDetail>
-      </nav>
+    <div class="video-editing">
+      <SideBar></SideBar>
       <div id="" class="container">
         <VideoFilter></VideoFilter>
         <VideoPlayer></VideoPlayer>
@@ -19,15 +13,13 @@
 <script>
 import VideoPlayer from './VideoPlayer.vue'
 import VideoFilter from './VideoFilter.vue'
-// import SideBar from './SideBar.vue'
-import SideBarDetail from './SideBarDetail.vue'
+import SideBar from './SideBar.vue'
 
 export default {
   components: {
     VideoPlayer,
-    // SideBar,
+    SideBar,
     VideoFilter,
-    SideBarDetail
   }
 }
 </script>
