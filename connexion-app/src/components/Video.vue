@@ -10,7 +10,6 @@
 <script>
     export default {
         mounted() {
-
             var player       = document.getElementById('video-element');
             var btnPlayPause = document.getElementById('btnPlayPause');
             var btnPause = document.getElementById('btnPause');

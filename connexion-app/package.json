@@ -14,6 +14,7 @@
     "@knight-lab/timelinejs": "^3.8.18",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "interactjs": "^1.10.11",
     "vue": "^2.6.11"
   },
   "devDependencies": {
