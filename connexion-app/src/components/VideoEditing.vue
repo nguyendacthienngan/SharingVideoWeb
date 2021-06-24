@@ -7,7 +7,6 @@
           <VideoFilter></VideoFilter>
           <VideoPlayer></VideoPlayer>
         </div>
-       
     </div>
     
 </template>

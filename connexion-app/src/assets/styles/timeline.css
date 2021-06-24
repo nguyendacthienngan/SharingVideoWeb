@@ -120,7 +120,7 @@
   position: relative;
 }
 
-.slidecontainer {
+  .slidecontainer {
   width: 100%; /* Width of the outside container */
 }
 
@@ -132,28 +132,55 @@
 .parent{
   position: relative;
 }
-#test:before{
-  background: url('http://i.stack.imgur.com/XyerX.jpg') CENTER CENTER NO-REPEAT;
-  content:url('http://i.stack.imgur.com/Icd9n.png'); /* 21x21 transparent pixels */
-  width:21px;
-  height:21px;
-}
-.slider::after{
-  content:"Hello"
-}
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 100%; /* Full-width */
+  width: 100%;
   height: 10px; /* Specified height */
   outline: none; /* Remove outline */
   margin-top: 30px;
   padding-top: 40px;
-  background-color: rgba(112, 44, 44, 0.6);
+  background-color: rgba(196,196,196,60%);
   border-radius: 15px;
+  position: relative;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+
+}
+.slider:after {
+  content: " ";
+  position: absolute;
+  
+  left: 830px;
+  right: 0px;
+  top: 12px;
+  /* bottom: 0px; */
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../images/resize_white.png");
+  background-repeat: no-repeat;
+  background-size: 6px 15px;
+  cursor: col-resize;
 }
 
+.slider:before {
+  content:" ";
+  position: absolute;
+
+  left: 8px;
+  right: 50%;
+  top: 12px;
+  bottom: 0px;
+
+  background-image: url("../images/resize_white.png");
+  background-repeat: no-repeat;
+  background-size: 6px 15px;
+  cursor: col-resize;
+}
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -223,6 +250,8 @@
 #scissors{
   padding-left: 30px;
   width: 50%;
+
+  
 }
 
 #scissors:hover{
