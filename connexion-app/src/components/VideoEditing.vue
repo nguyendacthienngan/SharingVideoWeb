@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper d-flex align-items-stretch">
+    <div class="d-flex">
       <nav id="sidebar">
         <SideBarDetail filename="Logo.png"></SideBarDetail>
         <SideBarDetail filename="Add-Icon.png" text="Create"></SideBarDetail>
@@ -7,7 +7,7 @@
         <SideBarDetail filename="Record-Icon.png" text="Record"></SideBarDetail>
         <SideBarDetail filename="Filter-Icon.png" text="Filter"></SideBarDetail>
       </nav>
-      <div id="content">
+      <div id="" class="container">
         <VideoFilter></VideoFilter>
         <VideoPlayer></VideoPlayer>
       </div>

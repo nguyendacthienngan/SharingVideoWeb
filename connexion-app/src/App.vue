@@ -1,12 +1,6 @@
 <template>
-  <div id="app">
-    <!-- <div id="main">
-      <NavBar></NavBar>
-      <Main></Main>
-    </div> -->
-    <div id="video-editing">
+  <div id="video-editing">
       <VideoEditing></VideoEditing>
-    </div>
   </div>
 </template>
 
@@ -27,14 +21,6 @@ export default {
 
 <style src="./assets/styles/main.css"></style>
 <style>
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
 @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"),
@@ -42,6 +28,12 @@ export default {
 }
 body{
   font-family: "Montserrat", Helvetica, Arial;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px; */
 }
 @import'~bootstrap/dist/css/bootstrap.css'
 

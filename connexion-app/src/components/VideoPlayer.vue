@@ -1,5 +1,5 @@
 <template>
-    <div class="top-border container">
+    <div class="top-border">
         <br>
         <div class="row video-controls">
             <div class="col-md row align-self-center">
@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container row h-100 col-md ">
+            <div class="row h-100 col-md ">
                 <img id="quickRestart" src="../assets/images/quick-restart.svg" class="rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
                 <img id="rewind" src="../assets/images/rewind-button.svg" class="video-player col row justify-content-center align-self-center"  width="30px" height="30px">
                 <img id='btnPlayPause' src="../assets/images/play-button-arrowhead.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">

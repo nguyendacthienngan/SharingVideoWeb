@@ -110,17 +110,13 @@
   left: 100%;
   }
   
-  #mentionme{  
-    text-align:center;
-    margin-top:10%;
-  }
 /* Timeline */
 .timeline{
-  margin-top: 70px;
+  margin-top: 50px;
   position: relative;
 }
 
-  .slidecontainer {
+.slidecontainer {
   width: 100%; /* Width of the outside container */
 }
 

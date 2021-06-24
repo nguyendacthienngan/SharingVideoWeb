@@ -1,9 +1,9 @@
 <template>
-  <div class="row container">
-    <div class="col-md-6 container right-border filters">
+  <div class="row">
+    <div class="col-md-6 right-border filters">
       <Filters></Filters>
     </div>
-    <div class="col-md-6 text-center">
+    <div class="col-md-6 text-center" >
       <div class="row headline-video">
        
         <div class="col-md">
