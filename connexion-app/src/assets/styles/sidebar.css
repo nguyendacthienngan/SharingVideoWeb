@@ -38,6 +38,7 @@
         float: left;
         margin-left: 15px;
         margin-top: 15px;
+        margin-bottom: 15px;
     }
     #logo-img {
         width: 41px !important;
@@ -63,7 +64,7 @@
     }
 
     #menuToggle{
-        margin-top: 25px;
+        margin-top: 30px;
         margin-right: 5px;
         float: right;
     }
