@@ -1,15 +1,15 @@
 <template >
     <div v-if="filename !=='Logo.png'" class="text-center nav-component hide-for-small-screen align-self-center">
-        <div >
+        <div>
             <img :src="require(`../assets/images/${filename}`)" width="41px" height="41px" />
         </div>
         <div class="">
            {{text}}
         </div>
     </div>
-    <div v-else class="text-center nav-component align-self-center">
+    <div v-else class="text-center nav-component align-self-center" id="logo">
         <div >
-            <img :src="require(`../assets/images/${filename}`)" width="80px" height="83px" id="logo"/>
+            <img :src="require(`../assets/images/${filename}`)" width="80px" height="83px" id="logo-img"/>
         </div>
         <div class="">
            {{text}}
