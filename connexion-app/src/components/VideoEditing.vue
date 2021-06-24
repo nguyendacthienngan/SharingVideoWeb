@@ -1,27 +1,39 @@
 <template>
-    <div class="row">
-        <div class="col-md-2 p-0">
-          <SideBar></SideBar>
-        </div>
-        <div class="col-md-10 p-0">
-          <VideoFilter></VideoFilter>
-          <VideoPlayer></VideoPlayer>
-        </div>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <SideBarDetail filename="Logo.png"></SideBarDetail>
+        <SideBarDetail filename="Add-Icon.png" text="Create"></SideBarDetail>
+        <SideBarDetail filename="Folder-Icon.png" text="My Media"></SideBarDetail>
+        <SideBarDetail filename="Record-Icon.png" text="Record"></SideBarDetail>
+        <SideBarDetail filename="Filter-Icon.png" text="Filter"></SideBarDetail>
+      </nav>
+      <div id="content">
+        <VideoFilter></VideoFilter>
+        <VideoPlayer></VideoPlayer>
+      </div>
     </div>
+    
     
 </template>
 
 <script>
 import VideoPlayer from './VideoPlayer.vue'
 import VideoFilter from './VideoFilter.vue'
-import SideBar from './SideBar.vue'
+// import SideBar from './SideBar.vue'
+import SideBarDetail from './SideBarDetail.vue'
+
 export default {
   components: {
     VideoPlayer,
-    SideBar,
-    VideoFilter
+    // SideBar,
+    VideoFilter,
+    SideBarDetail
   }
 }
 </script>
+
+<style>
+
+</style>
 
 <style src="../assets/styles/video-editing.css"></style>

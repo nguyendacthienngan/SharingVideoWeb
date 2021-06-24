@@ -1,11 +1,10 @@
 <template>
-    <div class="sidebar">
+    <nav class="sidebar">
         <SideBarDetail></SideBarDetail>
         <SideBarDetail></SideBarDetail>
         <SideBarDetail></SideBarDetail>
         <SideBarDetail></SideBarDetail>
-
-    </div>
+    </nav>
 </template>
 
 <script>

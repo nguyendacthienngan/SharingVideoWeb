@@ -149,11 +149,11 @@
   left: 0; */
 
 }
-.slider:after {
+.slider1:after {
   content: " ";
   position: absolute;
   
-  left: 830px;
+  left: 0px;
   right: 0px;
   top: 12px;
   /* bottom: 0px; */
