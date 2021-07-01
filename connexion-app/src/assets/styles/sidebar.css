@@ -14,10 +14,14 @@
     display: flex;
 }
 @media only screen and (max-width: 576px) {
+    .menu-toggle{
+        
+    }
     .video-editing{
         display: block;
     }
     #sidebar {
+        width: 100%;
         position: fixed;
         top: 0;
         z-index: 99999;
@@ -27,6 +31,11 @@
         width: 100%;
         max-width: 100%;
         width: 100vw;
+
+        padding-right: 15px !important;
+        padding-left: 10px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
     }
     /* #sidebar div:not(:first-child) {display: none;} */
     /* #sidebar #menuToggle {display: block;} */

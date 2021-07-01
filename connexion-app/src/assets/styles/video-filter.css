@@ -17,6 +17,11 @@
   #player-in-large-screen{
     display:none;
   }
+  #export{
+    /* justify-content: center !important;
+    display: flex;
+    margin-right: 0 !important */
+  }
 }
 @media only screen and (min-width: 568px) {
   #player-in-small-screen{

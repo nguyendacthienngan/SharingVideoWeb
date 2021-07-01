@@ -3,17 +3,17 @@
     <div class="col-md-6 right-border filters order-2 order-md-1">
       <Filters></Filters>
     </div>
-    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component container-lg">
-      <div class="row headline-video container">
-        <div class="col-md-6 ">
+    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component ">
+      <div class="row headline-video ">
+        <div class="col-6 ">
           <div class="input-group video-title">
             <input type="text" class="form-control" placeholder="Project Name" aria-label="Project Name" aria-describedby="basic-addon1">
           </div>
         </div>
-         <div class="col-md">
+         <div class="col">
         </div>
-        <div class="col-md-2 row justify-content-end">
-          <Button text='Export'></Button>
+        <div id="export" class="col-2 row justify-content-end m-r-15">
+           <Button text='Export'></Button>
         </div>
       </div>
       <div class="container">
