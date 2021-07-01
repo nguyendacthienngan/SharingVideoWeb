@@ -7,10 +7,10 @@
           <span></span>
         </div>
         <div id="menu-bar" class="menu-bar">
-          <SideBarDetail filename="Add-Icon.png" text="Create"></SideBarDetail>
-          <SideBarDetail filename="Folder-Icon.png" text="My Media"></SideBarDetail>
-          <SideBarDetail filename="Record-Icon.png" text="Record"></SideBarDetail>
-          <SideBarDetail filename="Filter-Icon.png" text="Filter"></SideBarDetail>
+          <SideBarDetail filename="Add-Icon.svg" text="Create"></SideBarDetail>
+          <SideBarDetail filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
+          <SideBarDetail filename="Record-Icon.svg" text="Record"></SideBarDetail>
+          <SideBarDetail filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
         </div>
     </nav>
 </template>
@@ -22,7 +22,6 @@ export default {
     SideBarDetail
   },
   mounted(){
-    var body = document.getElementsByTagName("body")[0]
     var menuToggleElement = document.getElementById('menuToggle')
     var menubarElement = document.getElementById('menu-bar')
     menuToggleElement.addEventListener('click',menuToggle)
