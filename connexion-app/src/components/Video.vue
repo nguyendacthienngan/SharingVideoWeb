@@ -1,6 +1,6 @@
 <template>
     <div class="pattern">
-        <video class="video" id="video-element" muted>
+        <video class="video video-wrapper" id="video-element" muted>
             <source src="../assets/videos/Lofi_Lovely.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
@@ -151,4 +151,9 @@
         overflow: hidden;
         z-index: 1;
     }
+    .video-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
 </style>

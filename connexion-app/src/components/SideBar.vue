@@ -12,8 +12,6 @@
           <SideBarDetail filename="Record-Icon.png" text="Record"></SideBarDetail>
           <SideBarDetail filename="Filter-Icon.png" text="Filter"></SideBarDetail>
         </div>
-        
-        
     </nav>
 </template>
 
@@ -28,10 +26,11 @@ export default {
     var menubarElement = document.getElementById('menu-bar')
     menuToggleElement.addEventListener('click',menuToggle)
     function menuToggle(){
-      if (menubarElement.style.display == "none")
-        menubarElement.style.display = "block"
-      else 
+      alert(window.screen.availHeight)
+      if (menubarElement.style.display == "block")
         menubarElement.style.display = "none"
+      else 
+        menubarElement.style.display = "block"
     }
     
   }

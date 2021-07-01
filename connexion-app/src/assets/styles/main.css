@@ -4,3 +4,20 @@ body {
 .title {
     margin-top: 20px;
 }
+
+@media only screen and (min-width: 576px){
+    .right-border{
+        border-right: 1px solid rgba(196, 196, 196,60);
+    }
+    
+    .top-border{
+        border-top: 1px solid rgba(196, 196, 196,60);
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .video-embded-component{
+      margin-top: 50px;
+    }
+}

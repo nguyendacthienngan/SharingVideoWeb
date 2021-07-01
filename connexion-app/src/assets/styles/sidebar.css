@@ -9,14 +9,11 @@
 #sidebar{
     
 }
-/* .menu-bar{
-    display: none
-} */
+
 .video-editing{
     display: flex;
 }
 @media only screen and (max-width: 576px) {
-    
     .video-editing{
         display: block;
     }
@@ -53,6 +50,7 @@
         display: none;
     }
     .menu-bar{
+        display:none;
         border: 1px solid #c4c4c4;
         margin-top: 70px;
         padding: 20px;

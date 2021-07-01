@@ -1,10 +1,10 @@
 <template>
   <div class="row">
-    <div class="col-md-6 right-border filters">
+    <div class="col-md-6 right-border filters order-2 order-md-1">
       <Filters></Filters>
     </div>
-    <div class="col-md-6 text-center" >
-      <div class="row headline-video">
+    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component" >
+      <div class="row headline-video ">
        
         <div class="col-md">
           <div class="input-group video-title">
@@ -18,7 +18,10 @@
           <Button text='Export'></Button>
         </div>
       </div>
-      <Video></Video>
+      <div class="container">
+        <Video></Video>
+
+      </div>
     </div>
   </div>
     

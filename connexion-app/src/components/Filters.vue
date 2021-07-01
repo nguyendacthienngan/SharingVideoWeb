@@ -45,10 +45,13 @@ export default {
         margin-bottom: 10px;
         margin-top: 10px;
     }
+   
+
     .filters {
         overflow:scroll;
         height: 360px;
     }
+    
     .filter-title{
         margin-bottom: 10px;
     }
