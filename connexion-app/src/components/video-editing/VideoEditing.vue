@@ -17,7 +17,7 @@
 <script>
 import VideoPlayer from './VideoPlayer.vue'
 import VideoSection from './VideoSection.vue'
-import SideBar from './SideBar.vue'
+import SideBar from '../common/SideBar.vue'
 
 export default {
   components: {
@@ -32,4 +32,4 @@ export default {
 
 </style>
 
-<style src="../assets/styles/video-editing.css"></style>
+<style src="../../assets/styles/video-editing.css"></style>

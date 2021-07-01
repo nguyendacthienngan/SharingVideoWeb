@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SideBarDetail from './SideBarDetail.vue'
+import SideBarDetail from '../common/SideBarDetail.vue'
 export default {
   components: {
     SideBarDetail
@@ -48,5 +48,5 @@ export default {
   }
 }
 </script>
-<style src="../assets/styles/sidebar.css">
+<style src="../../assets/styles/sidebar.css">
 </style>

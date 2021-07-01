@@ -1,7 +1,7 @@
 <template>
     <div class="pattern">
         <video class="video video-wrapper" id="video-element" muted>
-            <source src="../assets/videos/Lofi_Lovely.mp4" type="video/mp4">
+            <source src="../../assets/videos/Lofi_Lovely.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>

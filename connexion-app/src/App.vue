@@ -7,7 +7,7 @@
 <script>
 // import NavBar from './components/NavBar.vue'
 // import Main from './components/Main.vue'
-import VideoEditing from './components/VideoEditing.vue'
+import VideoEditing from './components/video-editing/VideoEditing.vue'
 
 export default {
   name: 'App',

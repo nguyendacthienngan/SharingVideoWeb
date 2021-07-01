@@ -4,19 +4,19 @@
         <div class="row">
             <div class="col  align-self-center trim ">
                 <div id="scissors">
-                    <img src="../assets/images/scissors.svg"  height="25px" />
+                    <img src="../../assets/images/scissors.svg"  height="25px" />
                     <span class="p-2"></span>
                     <span>Trim</span>
                 </div>
             </div>
             <div id="video-controls" class="container col-lg order-lg-2 order-2">
                 <div class="row">
-                    <img id="quickRestart" src="../assets/images/quick-restart.svg" class="rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
-                    <img id="rewind" src="../assets/images/rewind-button.svg" class="video-player col row justify-content-center align-self-center"  width="30px" height="30px">
-                    <img id='btnPlayPause' src="../assets/images/play-button-arrowhead.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
-                    <img id='btnPause' src="../assets/images/pause.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
-                    <img id='forward' src="../assets/images/forward-button.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
-                    <img id='skipTrack' src="../assets/images/skip-track.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
+                    <img id="quickRestart" src="../../assets/images/quick-restart.svg" class="rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
+                    <img id="rewind" src="../../assets/images/rewind-button.svg" class="video-player col row justify-content-center align-self-center"  width="30px" height="30px">
+                    <img id='btnPlayPause' src="../../assets/images/play-button-arrowhead.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
+                    <img id='btnPause' src="../../assets/images/pause.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
+                    <img id='forward' src="../../assets/images/forward-button.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
+                    <img id='skipTrack' src="../../assets/images/skip-track.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
                 
                 </div>
             </div>
@@ -93,6 +93,6 @@ export default {
   },
 }
 </script>
-<style src="../assets/styles/timeline.css">
+<style src="../../assets/styles/timeline.css">
   
 </style>

@@ -14,13 +14,13 @@
         </div>
         <b-collapse :id="id" v-model="visible" class="mt-2 filter row">
         <div :id="filter_1" class="col">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
+                <img src="../../../assets/images/sample/Filter_1.png" width="77px" height="79px">
             </div>
             <div :id="filter_2" class="col">
-               <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
+               <img src="../../../assets/images/sample/Filter_1.png" width="77px" height="79px">
             </div>
             <div :id="filter_3" class="col">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
+                <img src="../../../assets/images/sample/Filter_1.png" width="77px" height="79px">
             </div>
 
         </b-collapse>

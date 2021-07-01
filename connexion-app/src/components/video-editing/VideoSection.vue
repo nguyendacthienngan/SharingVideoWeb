@@ -30,8 +30,8 @@
 
 <script>
 import Video from './Video.vue'
-import Button from './Button.vue'
-import Filters from './Filters.vue'
+import Button from '../common/Button.vue'
+import Filters from './filters/Filters.vue'
 import VideoPlayer from './VideoPlayer.vue'
 export default {
   components: {
@@ -103,4 +103,4 @@ export default {
 }
 </script>
 
-<style src="../assets/styles/video-filter.css"></style>
+<style src="../../assets/styles/video-filter.css"></style>
