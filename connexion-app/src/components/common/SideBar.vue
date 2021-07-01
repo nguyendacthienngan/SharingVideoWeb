@@ -7,10 +7,10 @@
           <span></span>
         </div>
         <div id="menu-bar" class="menu-bar">
-          <SideBarDetail id="add" filename="Add-Icon.svg" text="Create"></SideBarDetail>
-          <SideBarDetail id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
-          <SideBarDetail id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
-          <SideBarDetail id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
+          <SideBarDetail @toggle-click="greet" id="create" filename="Add-Icon.svg" text="Create"></SideBarDetail>
+          <SideBarDetail @toggle-click="greet" id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
+          <SideBarDetail @toggle-click="greet" id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
+          <SideBarDetail @toggle-click="greet" id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
         </div>
     </nav>
 </template>
@@ -20,6 +20,11 @@ import SideBarDetail from '../common/SideBarDetail.vue'
 export default {
   components: {
     SideBarDetail
+  },
+  methods: {
+    greet: function (event) {
+      
+    }
   },
   mounted(){
     var menuToggleElement = document.getElementById('menuToggle')
@@ -44,7 +49,6 @@ export default {
       }
     }
 
-    
   }
 }
 </script>

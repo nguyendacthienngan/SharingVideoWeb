@@ -1,5 +1,5 @@
 <template >
-    <div v-if="filename !=='Logo.png'" class="text-center nav-component hide-for-small-screen align-self-center" :id="id">
+    <div v-if="filename !=='Logo.png'" class="text-center nav-component hide-for-small-screen align-self-center" :id="id" @click="$emit('toggle-click', 0)">
         <div v-if="filename == 'Add-Icon.svg'">
             <svg width="41" height="41" viewBox="0 0 71 71" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="35.5" cy="35.5" r="34.75" stroke="black" stroke-width="1.5"/>
