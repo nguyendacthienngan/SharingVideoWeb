@@ -1,20 +1,24 @@
 <template>
   <div id="video-editing" class="">
-      <VideoEditing></VideoEditing>
+     <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+        <router-view/>
+      <!-- <VideoEditing></VideoEditing> -->
+       
   </div>
 </template>
 
 <script>
 // import NavBar from './components/NavBar.vue'
 // import Main from './components/Main.vue'
-import VideoEditing from './components/video-editing/VideoEditing.vue'
+// import VideoEditing from './components/video-editing/VideoEditing.vue'
 
 export default {
   name: 'App',
   components: {
     // NavBar,
     // Main,
-    VideoEditing
+    // VideoEditing
   }
 }
 </script>
