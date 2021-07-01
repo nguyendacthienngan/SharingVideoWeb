@@ -2,6 +2,7 @@
     <div class="video-editing bottom-border right-border">
       <SideBar></SideBar>
       <div id="" class="container">
+
         <VideoFilter></VideoFilter>
         <div id="player-in-large-screen">
           <VideoPlayer></VideoPlayer>

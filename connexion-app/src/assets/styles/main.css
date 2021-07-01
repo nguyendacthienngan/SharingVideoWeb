@@ -28,3 +28,6 @@ body {
 .m-r-15{
     margin-right: 15px !important;
 }
+.vertical-center {
+    transform: translate(0,-10%);
+  }

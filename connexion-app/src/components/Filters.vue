@@ -1,14 +1,14 @@
 <template>
     <div id="filters" class="p-3">
         <h4 class="title">Add Filter</h4>
-        <div class="form-group has-search">
-            <span class="fa fa-search form-control-feedback"></span>
+        <div class="form-group has-search ">
             <input type="text" class="form-control" placeholder="Search">
+            <!-- <span class="fa fa-search form-control-feedback "></span> -->
         </div>
-        <FilterDetail title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
-        <FilterDetail title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
-        <FilterDetail title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
-        <FilterDetail title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+        <FilterDetail id="ocean1" title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
+        <FilterDetail id="ocean2" title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
+        <FilterDetail id="ocean3" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+        <FilterDetail id="ocean4" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
         
         <!-- <div class="filter-title">
             Ocean Theme
@@ -46,11 +46,13 @@ export default {
         margin-top: 10px;
     }
    
-
-    .filters {
-        overflow:scroll;
-        height: 360px;
+    @media only screen and (min-width: 576px) {
+        .filters {
+            overflow:scroll;
+            height: 360px;
+        }
     }
+    
     
     .filter-title{
         margin-bottom: 10px;

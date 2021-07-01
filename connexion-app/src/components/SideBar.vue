@@ -22,15 +22,18 @@ export default {
     SideBarDetail
   },
   mounted(){
-    var body = document.getElementsByTagName("BODY")[0]
+    var body = document.getElementsByTagName("body")[0]
     var menuToggleElement = document.getElementById('menuToggle')
     var menubarElement = document.getElementById('menu-bar')
     menuToggleElement.addEventListener('click',menuToggle)
-    body.addEventListener('onresize', resizeDetected)
+    window.addEventListener('resize', resizeDetected);
     function resizeDetected(){
-      alert("ALO")
-      if (window.screen.availWidth > 568)
+      if (window.screen.availWidth > 568 && menubarElement.style.display == "none")
         menubarElement.style.display = "block"
+      else if (window.screen.availWidth <= 568 )
+      {
+        menubarElement.style.display = "none"
+      }
     }
     function menuToggle(){
       if (window.screen.availWidth <= 568)
