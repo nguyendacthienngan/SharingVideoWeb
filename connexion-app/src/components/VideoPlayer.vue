@@ -22,9 +22,12 @@
                 
                 </div>
             </div>
-           <div class="col-lg row justify-content-center align-self-center">
-               <span id="current-time">00:00:00</span>/
-               <span id="duration">00:00:00</span>
+           <div class="col-lg container">
+               <div class="row justify-content-center align-self-center">
+                    <span id="current-time">00:00:00</span>/
+                    <span id="duration">00:00:00</span>
+               </div>
+               
             </div>
         </div>
         
