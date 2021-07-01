@@ -1,5 +1,5 @@
 <template>
-    <div class="video-editing">
+    <div class="video-editing bottom-border right-border">
       <SideBar></SideBar>
       <div id="" class="container">
         <VideoFilter></VideoFilter>

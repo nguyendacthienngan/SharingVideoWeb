@@ -14,7 +14,11 @@ body {
         border-top: 1px solid rgba(196, 196, 196,60);
         margin: 0;
     }
+    .bottom-border{
+        border-bottom: 1px solid rgba(196, 196, 196,60);
+    }
 }
+
 
 @media only screen and (max-width: 576px){
     .video-embded-component{

@@ -1,5 +1,5 @@
 <template>
-  <div id="video-editing">
+  <div id="video-editing" class="">
       <VideoEditing></VideoEditing>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
   src: local("Montserrat"),
    url(./assets/fonts/Montserrat-Regular.ttf) format("truetype");
 }
+
 body{
   font-family: "Montserrat", Helvetica, Arial;
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
