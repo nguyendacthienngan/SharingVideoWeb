@@ -118,6 +118,7 @@
 
 .slidecontainer {
   width: 100%; /* Width of the outside container */
+  margin-bottom: 120px;
 }
 
 .resize-icon{
@@ -244,7 +245,7 @@
 }
 
 #scissors{
-  padding-left: 30px;
+  /* padding-left: 30px; */
   width: 50%;
 }
 
@@ -255,4 +256,17 @@
   border: 1px solid #F7F7F8;
   background-color: #F7F7F8;
   border-radius: 15px;
+}
+#duration-time{
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  
+}
+@media only screen and (min-width: 576px) {
+  #scissors{
+    padding-left: 30px;
+    /* width: 50%; */
+  }
 }

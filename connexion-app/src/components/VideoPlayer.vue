@@ -1,17 +1,15 @@
 <template>
-    <div class="top-border container ">
+    <div class="top-border container">
         <br>
         <div class="row">
-            <div class="col-lg  align-self-center trim">
-                <div class="col-lg">
-                    <div id="scissors">
-                        <img src="../assets/images/scissors.svg"  height="25px" />
-                        <span class="p-2"></span>
-                        <span>Trim</span>
-                    </div>
+            <div class="col  align-self-center trim ">
+                <div id="scissors">
+                    <img src="../assets/images/scissors.svg"  height="25px" />
+                    <span class="p-2"></span>
+                    <span>Trim</span>
                 </div>
             </div>
-            <div id="video-controls" class="container col-lg">
+            <div id="video-controls" class="container col-lg order-lg-2 order-2">
                 <div class="row">
                     <img id="quickRestart" src="../assets/images/quick-restart.svg" class="rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
                     <img id="rewind" src="../assets/images/rewind-button.svg" class="video-player col row justify-content-center align-self-center"  width="30px" height="30px">
@@ -22,8 +20,8 @@
                 
                 </div>
             </div>
-           <div class="col-lg container">
-               <div class="row justify-content-center align-self-center">
+           <div class="col container order-lg-3 order-1">
+               <div id="" class="row justify-content-center align-self-center ">
                     <span id="current-time">00:00:00</span>/
                     <span id="duration">00:00:00</span>
                </div>
@@ -31,13 +29,7 @@
             </div>
         </div>
         
-        <div id='timeline' class="timeline slidecontainer">
-            <Timeline></Timeline>
-            <!-- <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress> -->
-            <form class="">
-                <input type="range" min="0" max="100" value="0" class="slider resize-drag" id='progress-bar'>
-            </form>
-        </div>
+        <Timeline></Timeline>
     </div>
 </template>
 <script>
@@ -98,7 +90,7 @@ export default {
             })
         ]
         })
-  }
+  },
 }
 </script>
 <style src="../assets/styles/timeline.css">

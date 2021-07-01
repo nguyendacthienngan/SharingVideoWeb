@@ -10,8 +10,6 @@
     border-radius: 12px;
     /* width: 320px; */
     height: 180px;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 @media only screen and (max-width: 768px){
     .trim{
@@ -20,5 +18,11 @@
     #video-controls{
         margin-bottom: 20px;
     }
+    
 }
 
+@media only screen and (min-width: 768px){
+    #video-element{
+        margin-top: 50px;
+    }
+}

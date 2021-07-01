@@ -3,7 +3,7 @@
     <div class="col-md-6 right-border filters order-2 order-md-1">
       <Filters></Filters>
     </div>
-    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component container">
+    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component container-lg">
       <div class="row headline-video container">
         <div class="col-md-6 ">
           <div class="input-group video-title">
@@ -18,6 +18,9 @@
       </div>
       <div class="container">
         <Video></Video>
+        <div id="player-in-small-screen">
+          <VideoPlayer></VideoPlayer>
+        </div>
 
       </div>
     </div>
@@ -29,11 +32,13 @@
 import Video from './Video.vue'
 import Button from './Button.vue'
 import Filters from './Filters.vue'
+import VideoPlayer from './VideoPlayer.vue'
 export default {
   components: {
     Video,
     Button,
-    Filters
+    Filters,
+    VideoPlayer
   },
   mounted(){
        var player = document.getElementById('video-element');

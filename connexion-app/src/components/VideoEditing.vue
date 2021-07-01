@@ -3,7 +3,10 @@
       <SideBar></SideBar>
       <div id="" class="container">
         <VideoFilter></VideoFilter>
-        <VideoPlayer></VideoPlayer>
+        <div id="player-in-large-screen">
+          <VideoPlayer></VideoPlayer>
+
+        </div>
       </div>
     </div>
     
