@@ -7,10 +7,10 @@
           <span></span>
         </div>
         <div id="menu-bar" class="menu-bar">
-          <SideBarDetail filename="Add-Icon.svg" text="Create"></SideBarDetail>
-          <SideBarDetail filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
-          <SideBarDetail filename="Record-Icon.svg" text="Record"></SideBarDetail>
-          <SideBarDetail filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
+          <SideBarDetail id="add" filename="Add-Icon.svg" text="Create"></SideBarDetail>
+          <SideBarDetail id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
+          <SideBarDetail id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
+          <SideBarDetail id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
         </div>
     </nav>
 </template>

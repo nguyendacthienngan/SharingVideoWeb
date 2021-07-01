@@ -3,7 +3,7 @@
       <SideBar></SideBar>
       <div id="" class="container">
 
-        <VideoFilter></VideoFilter>
+        <VideoSection></VideoSection>
         <div id="player-in-large-screen">
           <VideoPlayer></VideoPlayer>
 
@@ -16,14 +16,14 @@
 
 <script>
 import VideoPlayer from './VideoPlayer.vue'
-import VideoFilter from './VideoFilter.vue'
+import VideoSection from './VideoSection.vue'
 import SideBar from './SideBar.vue'
 
 export default {
   components: {
     VideoPlayer,
     SideBar,
-    VideoFilter,
+    VideoSection,
   }
 }
 </script>
