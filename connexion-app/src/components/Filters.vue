@@ -1,59 +1,15 @@
 <template>
-    <div class="p-3">
+    <div id="filters" class="p-3">
         <h4 class="title">Add Filter</h4>
         <div class="form-group has-search">
             <span class="fa fa-search form-control-feedback"></span>
             <input type="text" class="form-control" placeholder="Search">
         </div>
-        <Filter></Filter>
-        <div class="filter-title">
-            Ocean Theme
-        </div>
-        <div class="filter row">
-            <div id="grayscale" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="sepia" class="col-md">
-               <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="hue-rotate" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-        </div>
-        <div class="filter-title">
-            Ocean Theme
-        </div>
-        <div class="filter row">
-            <div id="tint" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="inkwell" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="blur" class="col-md">
-               <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-        </div>
-        <div class="filter-title">
-            Ocean Theme
-        </div>
-        <div class="filter row">
-             <div id="opacity" class="col-md">
-               <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="brightness" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-            <div id="combo" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-        </div>
-        <div class="filter-title">
-            Ocean Theme
-        </div>
-         <div class="filter row">
-             
-        </div>
+        <FilterDetail title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
+        <FilterDetail title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
+        <FilterDetail title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+        <FilterDetail title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+        
         <!-- <div class="filter-title">
             Ocean Theme
         </div>
@@ -73,10 +29,10 @@
     </div>
 </template>
 <script>
-import Filter from './Filter.vue'
+import FilterDetail from './FilterDetail.vue'
 export default {
     components:{
-        Filter
+        FilterDetail
     }
 }
 </script>
@@ -100,4 +56,50 @@ export default {
         margin-bottom: 10px;
     }
 
+/* SCROLL BAR */
+/* total width */
+#filters::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+#filters::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* scrollbar itself */
+#filters::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+#filters::-webkit-scrollbar-button {
+    display:none;
+}
+
+
+.filters::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+.filters::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* scrollbar itself */
+.filters::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.filters::-webkit-scrollbar-button {
+    display:none;
+}
 </style>
