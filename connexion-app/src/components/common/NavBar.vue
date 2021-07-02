@@ -10,7 +10,7 @@
             <SearchBar></SearchBar>
           </div>
           <div class="col-4 d-flex justify-content-end order-2 d-md-none">
-            <button v-on:click="toggle" class="d-md-none">
+            <button v-on:click="toggle" class="d-md-none menu-toggle">
               <span class="fa fa-bars d-md-none"></span>
             </button>
           </div>
@@ -65,6 +65,16 @@ export default {
     }
   },
   mounted(){
+    window.addEventListener('resize', resizeDetected);
+    var navBarButtons = document.getElementById('nav-bar-buttons')
+    function resizeDetected(){
+      if (window.screen.availWidth > 576 && navBarButtons.style.display == "none")
+        navBarButtons.style.display = "block"
+      else if (window.screen.availWidth <= 576 )
+      {
+        navBarButtons.style.display = "none"
+      }
+    }
   }
 }
 </script>
