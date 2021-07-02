@@ -1,0 +1,6 @@
+/* .comment-view{
+    max-height: 0px !important;
+} */
+.comment-view div img{
+    max-height: 650px !important;
+}
