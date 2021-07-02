@@ -2,38 +2,15 @@
     <div class="container post-card">
         <div class="card non-border">
             <div class="card-header container bg-white non-border">
-                <div class="d-flex">
-                    <div class="avatar">
-                        <img src="../../assets/images/Account.png" width="41px" height="41px">
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-11">
-                                <b>INTO1–刘宇 </b> @into1_liuyu_
-                                <br>
-                                Relatively cool
-                                <br>
-                                <span class="fa fa-music m-r-10"></span> <b>Crazy Frog</b>
-                                
-                            </div>
-                            <div class="col-1">
-
-                            </div>
-                            <button class="btn btn-danger btn-follow" >
-                                Follow
-                            </button>
-                        </div>
-                         
-                        
-                    </div>
-                </div>
-               
+                <PostCaption name="INTO1–刘宇" username="@into1_liuyu_" caption="Relatively cool" bg_music="Crazy Frog"></PostCaption>
             </div>
             <div class="card-body video-control-feed">
-                <video class="video video-wrapper video-feed"  controls >
+                <router-link to="/comment">
+                    <video class="video video-wrapper video-feed"  controls >
                     <source src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
+                </router-link>
                 <div class="video-feed-item">
                     <div class="pc-action-bar item-action-bar vertical">
                         <div class="bar-item-wrapper">
@@ -65,5 +42,13 @@
         
     </div>
 </template>
+<script>
+import PostCaption from '../home/PostCaption.vue'
+export default {
+    components: {
+        PostCaption
+    },
+}
+</script>
 <style src="../../assets/styles/post.css">
 </style>

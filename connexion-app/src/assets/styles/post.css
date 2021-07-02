@@ -68,28 +68,7 @@
 .item-action-bar p{
     text-align: center;
 }
-.container-post{
-    margin-right: 50px !important;
-}
-.btn-follow{
-    position: absolute;
-    right: 20px;
-    top: 12px;
-}
-.avatar{
-    margin-right: 10px;
-}
-.m-r-10{
-    margin-right: 5px;
-}
-.non-border{
-    border: 1px solid transparent !important;
-}
-.post-card{
-    padding-left: 0px !important;
-    padding-right: 0px !important;
 
-}
 .btn-follow{
     background-color: white !important;
     color: #FE2C55 !important;
