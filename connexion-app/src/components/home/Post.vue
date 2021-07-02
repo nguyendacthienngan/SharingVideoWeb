@@ -1,20 +1,23 @@
 <template>
-    <div class="container ">
-        <div class="card">
-            <div class="card-header container bg-white">
+    <div class="container post-card">
+        <div class="card non-border">
+            <div class="card-header container bg-white non-border">
                 <div class="d-flex">
                     <div class="avatar">
                         <img src="../../assets/images/Account.png" width="41px" height="41px">
                     </div>
                     <div>
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-11">
                                 <b>INTO1–刘宇 </b> @into1_liuyu_
                                 <br>
                                 Relatively cool
                                 <br>
-                                <span class="fa fa-music margin-right-10"></span> <b>Crazy Frog</b>
+                                <span class="fa fa-music m-r-10"></span> <b>Crazy Frog</b>
                                 
+                            </div>
+                            <div class="col-1">
+
                             </div>
                             <button class="btn btn-danger btn-follow" >
                                 Follow

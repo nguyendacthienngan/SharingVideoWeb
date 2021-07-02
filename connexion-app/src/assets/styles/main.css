@@ -24,10 +24,19 @@ body {
     .video-embded-component{
       margin-top: 50px;
     }
+    
 }
+@media only screen and (min-width: 576px){
+    .p-l-15{
+        padding-left: 35px !important;
+    }
+}
+
 .m-r-15{
     margin-right: 15px !important;
 }
 .vertical-center {
     transform: translate(0,-10%);
   }
+
+
