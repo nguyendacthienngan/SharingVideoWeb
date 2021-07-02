@@ -32,15 +32,15 @@ export default {
     menuToggleElement.addEventListener('click',menuToggle)
     window.addEventListener('resize', resizeDetected);
     function resizeDetected(){
-      if (window.screen.availWidth > 568 && menubarElement.style.display == "none")
+      if (window.screen.availWidth > 576 && menubarElement.style.display == "none")
         menubarElement.style.display = "block"
-      else if (window.screen.availWidth <= 568 )
+      else if (window.screen.availWidth <= 576 )
       {
         menubarElement.style.display = "none"
       }
     }
     function menuToggle(){
-      if (window.screen.availWidth <= 568)
+      if (window.screen.availWidth <= 576)
       {
         if (menubarElement.style.display == "block")
           menubarElement.style.display = "none"

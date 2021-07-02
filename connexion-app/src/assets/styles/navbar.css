@@ -1,5 +1,23 @@
 .nav-bar-buttons a{
   margin-left: 20px;
 }
-.nav-bar-buttons a svg {;
+
+.brand-title{
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: black;
+}
+
+@media only screen and (max-width: 576px) {
+  /* .navbar-brand{
+    justify-content: center !important;
+    display: flex !important;
+  } */
+}
+@media only screen and (min-width: 576px) {
+  /* .navbar-brand{
+    justify-content: left !important;
+  } */
 }
