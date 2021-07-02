@@ -1,7 +1,7 @@
 <template>
   <header class="blog-header">
     <div class="container">
- <div class="row  justify-content-between align-items-center">
+        <div class="row  justify-content-between align-items-center">
           <div class="col-4 pt-1 order-md-1 order-1">
             <router-link to="/" id="navbar-brand" class="navbar-brand">
               <img src="../../assets/images/Logo_With_Name.svg" width="116px" height="50px">
@@ -15,7 +15,7 @@
               <span class="fa fa-bars d-md-none"></span>
             </button>
           </div>
-          <div class="col-md-4 d-flex justify-content-end order-md-3 order-3">
+          <div class="col-md-4 d-flex  order-md-3 order-3 nav-bar-buttons-container">
             
             <div id="nav-bar-buttons" class="nav-bar-buttons">
               <router-link to="/editing">

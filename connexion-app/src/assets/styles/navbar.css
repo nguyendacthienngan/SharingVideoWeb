@@ -8,9 +8,7 @@
   border-bottom: 1px solid #C4C4C499;
 }
 
-.nav-bar-buttons a{
-  margin-left: 20px;
-}
+
 
 .brand-title{
   margin-left: 10px;
@@ -29,7 +27,7 @@
   border: solid 1px black;
 }
 .nav-bar-buttons{
-  z-index: 99999
+  z-index: 99999 !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -39,14 +37,30 @@
 }
 @media only screen and (max-width: 576px) {
   .nav-bar-buttons{
-    position: absolute;
-    padding: 15px;
-    top: -16px;
+    /* position: absolute; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* top: -16px; */
     border-radius: 5px;
     /* border: 1px solid #c4c4c4 !important; */
     backdrop-filter: saturate(180%) blur(10px);
   }
+  .nav-bar-buttons-container{
+    justify-content: center !important;
+
+  }
+  .nav-bar-buttons a{
+    margin-left: 0px;
+    margin-right: 20px;
+    
+  }
 }
 @media only screen and (min-width: 576px) {
- 
+  .nav-bar-buttons-container{
+    
+    justify-content: flex-end ;
+  }
+  .nav-bar-buttons a{
+    margin-left: 20px;
+  }
 }
