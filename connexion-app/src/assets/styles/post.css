@@ -63,3 +63,14 @@
 .container-post{
     margin-right: 50px !important;
 }
+.btn-follow{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+.avatar{
+    margin-right: 10px;
+}
+.margin-right-10{
+    margin-right: 5px;
+}

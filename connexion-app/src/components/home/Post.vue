@@ -1,23 +1,31 @@
 <template>
     <div class="container ">
         <div class="card">
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-10">
-                         <span class="fa fa-user"></span>
-                        Username
+            <div class="card-header container bg-white">
+                <div class="d-flex">
+                    <div class="avatar">
+                        <img src="../../assets/images/Account.png" width="41px" height="41px">
+
                     </div>
-                    <div class="col-2  d-flex justify-content-end ">
-                        <button class="btn btn-danger" style="">
-                            Follow
-                        </button>
+                    <div>
+                        <div class="row">
+                            <div class="col-12">
+                                <b>INTO1 - Lưu Vũ </b> @into1_liuyu_
+                                <br>
+                                Relatively cool
+                                <br>
+                                <span class="fa fa-music margin-right-10"></span> <b>Crazy Frog</b>
+                                
+                            </div>
+                            <button class="btn btn-danger btn-follow" >
+                                Follow
+                            </button>
+                        </div>
+                         
+                        
                     </div>
                 </div>
                
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                <br>
-                <span class="fa fa-music"></span>
-                Background music - Music name
             </div>
             <div class="card-body video-control-feed">
                 <img src="../../assets/images/sample/Video_1.png"  class="video-feed">
