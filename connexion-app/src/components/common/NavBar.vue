@@ -7,7 +7,7 @@
               <img src="../../assets/images/Logo_With_Name.svg" width="116px" height="50px">
             </router-link>
           </div>
-          <div class="col-md-4 order-md-2 order-4 ">
+          <div class="col-md-4 order-md-2 order-4 d-none d-md-block">
             <SearchBar></SearchBar>
           </div>
           <div class="col-4 d-flex justify-content-end order-2 d-md-none">

@@ -1,5 +1,5 @@
 <template>
-    <form class="d-flex form-control input-container">
+    <form class="d-flex form-control input-container ">
         <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px">
         <input id="search_in_navbar" class="" type="search" placeholder="Search" aria-label="Search">
     </form>
