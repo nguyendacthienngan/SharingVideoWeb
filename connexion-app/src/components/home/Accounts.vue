@@ -1,16 +1,15 @@
 <template>
     <div class="container">
-                <br>
-                <div class="d-none d-lg-block">
-                {{title}}
-
-                </div>
-                <Account></Account>
-                <Account></Account>
-                <Account></Account>
-                <Account></Account>
-                
-            </div>
+        <br>
+        <div class="d-none d-lg-block">
+            {{title}}
+        </div>
+        <Account></Account>
+        <Account></Account>
+        <Account></Account>
+        <Account></Account>
+        
+    </div>
 </template>
 <script>
 import Account from '../home/Account.vue'

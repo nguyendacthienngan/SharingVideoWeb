@@ -19,16 +19,19 @@
         <div class="suggested-accounts">
             <Accounts title="Suggested Accounts:"></Accounts>
         </div>
-        <div class="top-accounts">
-            <Accounts title="Your Top Accounts:"></Accounts>
+        <div class="discover">
+            <!-- <Accounts title="Your Top Accounts:"></Accounts> -->
+            <Discover></Discover>
         </div>
     </div>
 </template>
 <script>
 import Accounts from '../home/Accounts.vue'
+import Discover from '../discover/Discover.vue'
 export default {
     components: {
-        Accounts
+        Accounts,
+        Discover
     },
 }
 </script>
