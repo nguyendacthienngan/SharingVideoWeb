@@ -1,6 +1,9 @@
 <template>
     <div class="row comment-view">
         <div class="col-md-6 order-2 order-lg-1 left-video">
+            <router-link to="/">
+                 <span class="fa fa-times fa-2x exit-button"></span>
+            </router-link>
             <img src="../assets/images/sample/Image_2.png" class="w-100">
             <div class="d-sm-none container">
                 <CommentSection></CommentSection>

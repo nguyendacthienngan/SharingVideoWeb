@@ -4,3 +4,9 @@
 .comment-view div img{
     max-height: 650px !important;
 }
+.exit-button{
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
