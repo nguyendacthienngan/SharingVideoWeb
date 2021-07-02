@@ -5,12 +5,11 @@
                 <div class="d-flex">
                     <div class="avatar">
                         <img src="../../assets/images/Account.png" width="41px" height="41px">
-
                     </div>
                     <div>
                         <div class="row">
                             <div class="col-12">
-                                <b>INTO1 - Lưu Vũ </b> @into1_liuyu_
+                                <b>INTO1–刘宇 </b> @into1_liuyu_
                                 <br>
                                 Relatively cool
                                 <br>
@@ -28,7 +27,10 @@
                
             </div>
             <div class="card-body video-control-feed">
-                <img src="../../assets/images/sample/Video_1.png"  class="video-feed">
+                <video class="video video-wrapper video-feed"  controls >
+                    <source src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="video-feed-item">
                     <div class="pc-action-bar item-action-bar vertical">
                         <div class="bar-item-wrapper">
