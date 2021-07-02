@@ -1,6 +1,7 @@
 <template>
   <header class="blog-header">
-        <div class="row  justify-content-between align-items-center">
+    <div class="container">
+ <div class="row  justify-content-between align-items-center">
           <div class="col-4 pt-1 order-md-1 order-1">
             <router-link to="/" id="navbar-brand" class="navbar-brand">
               <img src="../../assets/images/Logo_With_Name.svg" width="116px" height="50px">
@@ -44,7 +45,8 @@
            
           </div>
         </div>
-      </header>
+    </div>
+  </header>
 </template>
 <style src="../../assets/styles/navbar.css"></style>
 <script>
