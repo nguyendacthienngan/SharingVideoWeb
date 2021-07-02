@@ -57,23 +57,26 @@ export default {
   },
   methods:{
     toggle: function (event) {
+      // alert("Hello")
       var navbarButtons = document.getElementById('nav-bar-buttons')
-      if (window.screen.availWidth <= 576)
+      if (window.innerWidth <= 768)
       {
         if (navbarButtons.style.display == "block")
           navbarButtons.style.display = "none"
         else 
           navbarButtons.style.display = "block"
       }
+      else
+        navbarButtons.style.display = "block"
     }
   },
   mounted(){
     window.addEventListener('resize', resizeDetected);
     var navBarButtons = document.getElementById('nav-bar-buttons')
     function resizeDetected(){
-      if (window.screen.availWidth > 576 && navBarButtons.style.display == "none")
+      if (window.innerWidth > 768)
         navBarButtons.style.display = "block"
-      else if (window.screen.availWidth <= 576 )
+      else 
       {
         navBarButtons.style.display = "none"
       }

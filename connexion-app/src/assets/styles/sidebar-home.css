@@ -6,3 +6,35 @@
 .filter-button-component{
     margin-bottom: 15px;
 }
+@media only screen and (max-width: 768px) {
+    .filter-button-component{
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+   
+    .side-bar-home{
+        border-right: 1px solid #C4C4C499;
+       
+    }
+    .side-bar-home .container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .suggested-accounts .container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .top-accounts .container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

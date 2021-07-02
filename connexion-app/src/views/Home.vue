@@ -6,11 +6,11 @@
          <br>
          <br>
          <br>
-         <div class="row">
-           <div class="col-md-3">
+         <div class="d-flex">
+           <div class="">
               <SideBar></SideBar>
             </div>
-            <div class="col-md-8">
+            <div class="">
                <Post></Post>
             </div>
          </div>
