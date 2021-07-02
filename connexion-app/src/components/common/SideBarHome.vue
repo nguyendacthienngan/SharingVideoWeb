@@ -9,10 +9,10 @@
                 <img src="../../assets/images/Users-Icon.svg" class="m-r-15" width="26px" height="26px">
                 <b>Following</b>
             </div>
-            <div class="filter-button-component d-md-none">
+            <div class="filter-button-component d-lg-none">
                 <img src="../../assets/images/Home-Icon.svg" class="m-r-15">
             </div>
-            <div class="filter-button-component d-md-none">
+            <div class="filter-button-component d-lg-none">
                 <img src="../../assets/images/Users-Icon.svg" class="m-r-15" width="26px" height="26px">
             </div>
         </div>

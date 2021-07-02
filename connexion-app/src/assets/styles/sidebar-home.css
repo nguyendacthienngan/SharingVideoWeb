@@ -6,6 +6,13 @@
 .filter-button-component{
     margin-bottom: 15px;
 }
+@media only screen and (min-width: 992px){
+    .side-bar-home{
+        min-width: 200px;
+        margin-right: 100px;
+       
+    }
+}
 @media only screen and (max-width: 768px) {
     .filter-button-component{
         display: flex;
