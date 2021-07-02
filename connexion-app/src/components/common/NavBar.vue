@@ -2,9 +2,9 @@
   <header class="blog-header">
         <div class="row  justify-content-between align-items-center">
           <div class="col-4 pt-1 order-md-1 order-1">
-            <a id="navbar-brand" class="navbar-brand" href="#">
+            <router-link to="/" id="navbar-brand" class="navbar-brand">
               <img src="../../assets/images/Logo_With_Name.svg" width="116px" height="50px">
-            </a>
+            </router-link>
           </div>
           <div class="col-md-4 order-md-2 order-4 ">
             <SearchBar></SearchBar>
@@ -15,13 +15,14 @@
             </button>
           </div>
           <div class="col-md-4 d-flex justify-content-end order-md-3 order-3">
+            
             <div id="nav-bar-buttons" class="nav-bar-buttons">
-              <a class="text-muted" href="#">
+              <router-link to="/editing">
                 <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32.494 10.3358C30.6916 3.15523 23.4095 -1.20452 16.2289 0.597963C10.6175 2.00661 6.54299 6.85647 6.12318 12.6267C2.13883 13.2838 -0.558497 17.0463 0.0985656 21.0307C0.682664 24.5728 3.7519 27.1668 7.34179 27.1526H13.4349V24.7154H7.34179C4.64972 24.7154 2.46733 22.533 2.46733 19.8409C2.46733 17.1488 4.64972 14.9664 7.34179 14.9664C8.01485 14.9664 8.56041 14.4209 8.56041 13.7478C8.55432 7.69061 13.4598 2.77533 19.517 2.76931C24.7604 2.76405 29.2741 6.47093 30.2883 11.6152C30.3885 12.1289 30.8053 12.5213 31.3242 12.5901C34.6557 13.0646 36.9718 16.1499 36.4974 19.4813C36.0714 22.4729 33.5172 24.7003 30.4955 24.7154H25.621V27.1526H30.4955C35.2067 27.1384 39.0142 23.3076 38.9999 18.5965C38.988 14.6748 36.3037 11.2664 32.494 10.3358Z" fill="black"/>
                   <path d="M18.6628 15.3199L13.7883 20.1944L15.5066 21.9126L18.3094 19.122V30.8085H20.7466V19.122L23.5373 21.9126L25.2555 20.1944L20.381 15.3199C19.9057 14.8474 19.1381 14.8474 18.6628 15.3199Z" fill="black"/>
                 </svg>
-              </a>
+              </router-link>
               <a class="text-muted" href="#">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)">
