@@ -11,7 +11,7 @@
               <SideBar></SideBar>
             </div>
             <div class="">
-               <Post></Post>
+               <router-view></router-view>
             </div>
          </div>
       </div>
@@ -21,12 +21,10 @@
 <script>
 import NavBar from '../components/common/NavBar.vue'
 import SideBar from '../components/common/SideBarHome.vue'
-import Post from '../components/home/Post.vue'
 export default {
     components:{
        NavBar,
        SideBar,
-       Post
     }
 }
 </script>
