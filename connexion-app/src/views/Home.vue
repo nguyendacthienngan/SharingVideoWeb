@@ -1,12 +1,16 @@
 <template>
-  <div class="">
-      Hello
-      Hii
+  <div class="container">
+     <NavBar></NavBar>
   </div>
 </template>
 
 <script>
-alert("Hello")
+import NavBar from '../components/common/NavBar.vue'
+export default {
+    components:{
+       NavBar
+    }
+}
 </script>
 
 <style>

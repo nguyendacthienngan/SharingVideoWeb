@@ -1,7 +1,7 @@
 <template>
   <div id="video-editing" class="">
      <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">Edit</router-link>
         <router-view/>
       <!-- <VideoEditing></VideoEditing> -->
        
