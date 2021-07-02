@@ -1,6 +1,6 @@
 <template>
     <div class="video-editing bottom-border right-border">
-      <SideBar></SideBar>
+      <SideBarEditing></SideBarEditing>
       <div id="" class="container">
 
         <VideoSection></VideoSection>
@@ -17,12 +17,12 @@
 <script>
 import VideoPlayer from './VideoPlayer.vue'
 import VideoSection from './VideoSection.vue'
-import SideBar from '../common/SideBar.vue'
+import SideBarEditing from '../common/SideBarEditing.vue'
 
 export default {
   components: {
     VideoPlayer,
-    SideBar,
+    SideBarEditing,
     VideoSection,
   }
 }

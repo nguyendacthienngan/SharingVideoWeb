@@ -1,3 +1,13 @@
+.blog-header{
+  overflow: hidden;
+  background-color: white !important;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 99999;
+  border-bottom: 1px solid #C4C4C499;
+}
+
 .nav-bar-buttons a{
   margin-left: 20px;
 }

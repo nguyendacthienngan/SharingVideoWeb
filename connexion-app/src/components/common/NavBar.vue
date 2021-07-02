@@ -1,5 +1,5 @@
 <template>
-  <header class="blog-header py-3">
+  <header class="blog-header">
         <div class="row  justify-content-between align-items-center">
           <div class="col-4 pt-1 order-md-1 order-1">
             <a id="navbar-brand" class="navbar-brand" href="#">
