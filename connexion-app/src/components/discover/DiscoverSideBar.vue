@@ -2,7 +2,7 @@
     <div class="container d-none d-lg-block">
         <br>
         Discover
-        <div class="row">
+        <div class="row hashtags">
             <router-link to="/trending">
                 <div class="discover-tag">
                     <span class="fa fa-hashtag"></span>

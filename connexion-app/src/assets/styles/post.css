@@ -18,9 +18,14 @@
     /* display: flex; */
     z-index: 999;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px ) {
     .video-feed-item {
         right: 200px !important;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .video-feed-item {
+        right: 160px !important;
     }
 }
 @media only screen and (max-width: 1000px) and (min-width: 576px) {

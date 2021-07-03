@@ -5,9 +5,12 @@
 
     }
 }
-
+.comment-view .left-video{
+    background-color: black;
+}
 .comment-view div img{
     max-height: 650px !important;
+    object-fit: scale-down;
 }
 .d-none .exit-button{
     color: white;
