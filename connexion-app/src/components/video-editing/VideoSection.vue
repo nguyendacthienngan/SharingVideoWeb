@@ -13,7 +13,9 @@
          <div class="col">
         </div>
         <div id="export" class="col-2 row justify-content-end m-r-15">
-           <Button text='Export'></Button>
+          <router-link to="/upload">
+            <Button text='Export'></Button>
+          </router-link>
         </div>
       </div>
       <div class="container">

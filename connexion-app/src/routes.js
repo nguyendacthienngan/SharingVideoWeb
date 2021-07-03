@@ -6,6 +6,7 @@ import Comment from './views/Comment.vue'
 import Search from './components/discover/Search.vue'
 import Posts from './components/home/Posts.vue'
 import Trending from './components/discover/Trending.vue'
+import UploadVideo from './views/UploadVideo.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,7 @@ export const router = new VueRouter({
             ]
         },
         {path: '/editing', component: Editing},
-        {path: '/comment', component: Comment}
+        {path: '/comment', component: Comment},
+        {path: '/upload', component: UploadVideo}
     ]
 })
