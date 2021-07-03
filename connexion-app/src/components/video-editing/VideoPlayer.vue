@@ -11,19 +11,19 @@
             </div>
             <div id="video-controls" class="container col-lg order-lg-2 order-2">
                 <div class="row">
-                    <img id="quickRestart" src="../../assets/images/quick-restart.svg" class="rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
-                    <img id="rewind" src="../../assets/images/rewind-button.svg" class="video-player col row justify-content-center align-self-center"  width="30px" height="30px">
-                    <img id='btnPlayPause' src="../../assets/images/play-button-arrowhead.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
-                    <img id='btnPause' src="../../assets/images/pause.svg" class="video-player col row justify-content-center align-self-center" width="50px" height="50px">
-                    <img id='forward' src="../../assets/images/forward-button.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
-                    <img id='skipTrack' src="../../assets/images/skip-track.svg" class="video-player col row justify-content-center align-self-center" width="30px" height="30px">
+                    <img src="../../assets/images/quick-restart.svg" class="quickRestart rotate180 video-player col row justify-content-center align-self-center"  width="30px" height="30px">
+                    <img src="../../assets/images/rewind-button.svg" class="rewind video-player col row justify-content-center align-self-center"  width="30px" height="30px">
+                    <img src="../../assets/images/play-button-arrowhead.svg" class="btnPlayPause video-player col row justify-content-center align-self-center" width="50px" height="50px">
+                    <img src="../../assets/images/pause.svg" class="btnPause video-player col row justify-content-center align-self-center" width="50px" height="50px">
+                    <img src="../../assets/images/forward-button.svg" class="forward video-player col row justify-content-center align-self-center" width="30px" height="30px">
+                    <img src="../../assets/images/skip-track.svg" class="skipTrack video-player col row justify-content-center align-self-center" width="30px" height="30px">
                 
                 </div>
             </div>
            <div class="col container order-lg-3 order-1">
                <div id="" class="row justify-content-center align-self-center ">
-                    <span id="current-time">00:00:00</span>/
-                    <span id="duration">00:00:00</span>
+                    <span class="current-time">00:00:00</span>/
+                    <span  class="duration">00:00:00</span>
                </div>
                
             </div>

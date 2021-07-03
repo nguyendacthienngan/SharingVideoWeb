@@ -112,7 +112,7 @@
     </div>
         <!-- <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress> -->
         <form class="">
-            <input type="range" min="0" max="100" value="0" class="slider resize-drag" id='progress-bar'>
+            <input type="range" min="0" max="100" value="0" class="slider resize-drag progress-bar">
         </form>
     </div>
 </template>

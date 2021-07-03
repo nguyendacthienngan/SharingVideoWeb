@@ -11,15 +11,15 @@
     export default {
         mounted() {
             var player       = document.getElementById('video-element');
-            var btnPlayPause = document.getElementById('btnPlayPause');
-            var btnPause = document.getElementById('btnPause');
-            var progressBar = document.getElementById('progress-bar');
-            var currentTime = document.getElementById('current-time')
-            var duration = document.getElementById('duration')
-            var quickRestart = document.getElementById('quickRestart')
-            var rewind = document.getElementById('rewind')
-            var forward = document.getElementById('forward')
-            var skipTrack = document.getElementById('skipTrack')
+            var btnPlayPause = document.getElementsByClassName('btnPlayPause')[0];
+            var btnPause = document.getElementsByClassName('btnPause')[0];
+            var progressBar = document.getElementsByClassName('progress-bar')[0];
+            var currentTime = document.getElementsByClassName('current-time')[0]
+            var duration = document.getElementsByClassName('duration')[0]
+            var quickRestart = document.getElementsByClassName('quickRestart')[0]
+            var rewind = document.getElementsByClassName('rewind')[0]
+            var forward = document.getElementsByClassName('forward')[0]
+            var skipTrack = document.getElementsByClassName('skipTrack')[0]
 
             var startTime, endTime
            

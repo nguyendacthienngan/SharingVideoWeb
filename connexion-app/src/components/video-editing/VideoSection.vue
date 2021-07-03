@@ -21,6 +21,7 @@
       <div class="container">
         <Video></Video>
         <div class="d-md-none">
+        <!-- <div id="player-in-small-screen"> -->
           <VideoPlayer></VideoPlayer>
         </div>
 
