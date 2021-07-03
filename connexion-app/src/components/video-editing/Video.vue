@@ -10,29 +10,74 @@
 <script>
     export default {
         mounted() {
-            var player       = document.getElementById('video-element');
-            var btnPlayPause = document.getElementsByClassName('btnPlayPause')[0];
-            var btnPause = document.getElementsByClassName('btnPause')[0];
-            var progressBar = document.getElementsByClassName('progress-bar')[0];
-            var currentTime = document.getElementsByClassName('current-time')[0]
-            var duration = document.getElementsByClassName('duration')[0]
-            var quickRestart = document.getElementsByClassName('quickRestart')[0]
-            var rewind = document.getElementsByClassName('rewind')[0]
-            var forward = document.getElementsByClassName('forward')[0]
-            var skipTrack = document.getElementsByClassName('skipTrack')[0]
-
-            var startTime, endTime
            
-            btnPlayPause.addEventListener("click", onClicked)
-            btnPause.addEventListener("click", onClicked)
+            var player       = document.getElementById('video-element');
+            var btnPlayPauses = document.getElementsByClassName('btnPlayPause')
+            var btnPlayPause = (btnPlayPauses[0].offsetWidth > 0 && btnPlayPauses[0].offsetHeight > 0) ? btnPlayPauses[0] : btnPlayPauses[1]
+
+            var btnPauses = document.getElementsByClassName('btnPause')
+            var btnPause = (btnPauses[0].offsetWidth > 0 && btnPauses[0].offsetHeight > 0) ? btnPauses[0] : btnPauses[1]
+
+            var progressBars = document.getElementsByClassName('progress-bar')
+            var progressBar = (progressBars[0].offsetWidth > 0 && progressBars[0].offsetHeight > 0) ? progressBars[0] : progressBars[1]
+
+            var currentTimes = document.getElementsByClassName('current-time')
+            var currentTime = (currentTimes[0].offsetWidth > 0 && currentTimes[0].offsetHeight > 0) ? currentTimes[0] : currentTimes[1]
+
+            var durations = document.getElementsByClassName('duration')
+            var duration = (durations[0].offsetWidth > 0 && durations[0].offsetHeight > 0) ? durations[0] : durations[1]
+
+            var quickRestarts = document.getElementsByClassName('quickRestart')
+            var quickRestart = (quickRestarts[0].offsetWidth > 0 && quickRestarts[0].offsetHeight > 0) ? quickRestarts[0] : quickRestarts[1]
+
+            var rewinds = document.getElementsByClassName('rewind')
+            var rewind = (rewinds[0].offsetWidth > 0 && rewinds[0].offsetHeight > 0) ? rewinds[0] : rewinds[1]
+
+
+            var forwards = document.getElementsByClassName('forward')
+            var forward = (forwards[0].offsetWidth > 0 && forwards[0].offsetHeight > 0) ? forwards[0] : forwards[1]
+
+            var skipTracks = document.getElementsByClassName('skipTrack')
+            var skipTrack = (skipTracks[0].offsetWidth > 0 && skipTracks[0].offsetHeight > 0) ? skipTracks[0] : skipTracks[1]
+            btnPlayPauses[0].addEventListener("click", onClicked)
+            btnPlayPauses[1].addEventListener("click", onClicked)
+
+            btnPauses[0].addEventListener("click", onClicked)
+            btnPauses[1].addEventListener("click", onClicked)
             player.addEventListener('ended', function() { this.pause(); }, false);	
             player.addEventListener('timeupdate', updateProgressBar, false);
-            progressBar.addEventListener("click", seek);
 
-            quickRestart.addEventListener("click", stopVideo);
-            rewind.addEventListener("click", rewindVideo);
-            forward.addEventListener("click", fastForwardVideo);
-            skipTrack.addEventListener("click", endVideo);
+            progressBars[0].addEventListener("click", seek);
+            progressBars[1].addEventListener("click", seek);
+
+            quickRestarts[0].addEventListener("click", stopVideo);
+            quickRestarts[1].addEventListener("click", stopVideo);
+
+            rewinds[0].addEventListener("click", rewindVideo);
+            rewinds[1].addEventListener("click", rewindVideo);
+
+            forwards[0].addEventListener("click", fastForwardVideo);
+            forwards[1].addEventListener("click", fastForwardVideo);
+
+            skipTracks[0].addEventListener("click", endVideo);
+            skipTracks[1].addEventListener("click", endVideo);
+
+            var startTime, endTime
+            window.addEventListener('resize', resizeDetected);
+            function resizeDetected(){
+                console.log("Hello")
+                btnPlayPause = (btnPlayPauses[0].offsetWidth > 0 && btnPlayPauses[0].offsetHeight > 0) ? btnPlayPauses[0] : btnPlayPauses[1]
+                btnPause = (btnPauses[0].offsetWidth > 0 && btnPauses[0].offsetHeight > 0) ? btnPauses[0] : btnPauses[1]
+                progressBar = (progressBars[0].offsetWidth > 0 && progressBars[0].offsetHeight > 0) ? progressBars[0] : progressBars[1]
+                currentTime = (currentTimes[0].offsetWidth > 0 && currentTimes[0].offsetHeight > 0) ? currentTimes[0] : currentTimes[1]
+                duration = (durations[0].offsetWidth > 0 && durations[0].offsetHeight > 0) ? durations[0] : durations[1]
+                quickRestart = (quickRestarts[0].offsetWidth > 0 && quickRestarts[0].offsetHeight > 0) ? quickRestarts[0] : quickRestarts[1]
+                rewind = (rewinds[0].offsetWidth > 0 && rewinds[0].offsetHeight > 0) ? rewinds[0] : rewinds[1]
+                forward = (forwards[0].offsetWidth > 0 && forwards[0].offsetHeight > 0) ? forwards[0] : forwards[1]
+                skipTrack = (skipTracks[0].offsetWidth > 0 && skipTracks[0].offsetHeight > 0) ? skipTracks[0] : skipTracks[1]
+
+            }
+            
 
             function onClicked(){
                 if (player.paused || player.ended){
