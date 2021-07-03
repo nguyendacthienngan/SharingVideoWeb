@@ -124,7 +124,7 @@
             }
             // Update the progress bar
              progressBar.oninput = function() {
-                console.log(progressBar.value)
+                // console.log(progressBar.value)
             };
             
             function updateProgressBar() {

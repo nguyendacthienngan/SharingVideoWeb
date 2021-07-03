@@ -7,9 +7,9 @@
             <div class="card-body video-control-feed">
                 <router-link to="/comment">
                     <video class="video video-wrapper video-feed"  controls >
-                    <source src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/webm">
+                        <source src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/webm">
                     Your browser does not support the video tag.
-                </video>
+                    </video>
                 </router-link>
                 <div class="video-feed-item">
                     <div class="pc-action-bar item-action-bar vertical">
