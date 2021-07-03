@@ -4,7 +4,7 @@
       <div id="" class="container">
 
         <VideoSection></VideoSection>
-        <div id="player-in-large-screen">
+        <div class="d-none d-md-block">
           <VideoPlayer></VideoPlayer>
 
         </div>

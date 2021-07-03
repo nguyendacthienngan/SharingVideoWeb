@@ -2,7 +2,6 @@
   <div class="row ">
     <div class="col-md-5 right-border filters order-2 order-md-1 ">
       <router-view></router-view>
-      <!-- <Filters></Filters> -->
     </div>
     <div class="col-md-7 text-center order-1 order-md-2 video-embded-component ">
       <div class="row headline-video ">
@@ -21,7 +20,7 @@
       </div>
       <div class="container">
         <Video></Video>
-        <div id="player-in-small-screen">
+        <div class="d-md-none">
           <VideoPlayer></VideoPlayer>
         </div>
 
@@ -34,13 +33,11 @@
 <script>
 import Video from './Video.vue'
 import Button from '../common/Button.vue'
-// import Filters from './filters/Filters.vue'
 import VideoPlayer from './VideoPlayer.vue'
 export default {
   components: {
     Video,
     Button,
-    // Filters,
     VideoPlayer
   },
   mounted(){
