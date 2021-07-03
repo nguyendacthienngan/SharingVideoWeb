@@ -9,6 +9,7 @@ import Posts from './components/home/Posts.vue'
 import Trending from './components/discover/Trending.vue'
 import Filter from './components/video-editing/filters/Filters.vue'
 import MyMedia from './components/video-editing/my-media/MyMedia.vue'
+import BrowseFile from './components/video-editing/browse-files/BrowseFile.vue'
 
 
 Vue.use(VueRouter)
@@ -28,13 +29,15 @@ export const router = new VueRouter({
         {
             path: '/editing', 
             component: Editing,
-            redirect: '/mymedia',
+            redirect: '/editing/mymedia',
             children: [
-                {path: '/filter', component: Filter },
-                {path: '/mymedia', component: MyMedia}
+                {path: '/editing/filter', component: Filter },
+                {path: '/editing/mymedia', component: MyMedia},
+                {path: '/editing/browsefile', component: BrowseFile}
             ]
         },
         {path: '/comment', component: Comment},
-        {path: '/upload', component: UploadVideo}
+        {path: '/upload', component: UploadVideo},
+        // {path: '/browsefile', component: BrowseFile}
     ]
 })

@@ -6,10 +6,11 @@
                 <line x1="17" y1="35" x2="54" y2="35" stroke="black" stroke-width="4"/>
                 <line x1="36" y1="20" x2="36" y2="51" stroke="black" stroke-width="4"/>
             </svg>
-            <b-modal id="modal-1" title="BootstrapVue">
-                <DropAnImage />
-                <!-- <p class="my-4">Hello from modal!</p> -->
-            </b-modal>
+                <!-- <BrowseFile></BrowseFile> -->
+
+            <!-- <b-modal id="modal-1" title="BootstrapVue">
+                Hello
+            </b-modal> -->
         </div>
         
         <!-- <b-button v-b-modal.modal-1>Launch demo modal</b-button> -->
@@ -46,10 +47,12 @@
     
 </template>
 <script>
-import DropAnImage from './DropAnImage.vue'
+// import BrowseFile from '../video-editing/browse-files/BrowseFile.vue'
+// import DropAnImage from './DropAnImage.vue'
 export default {
     components:{
-        DropAnImage
+        // DropAnImage,
+        // BrowseFile
     },
     props: ['filename', 'text', 'is_active', 'id']
 

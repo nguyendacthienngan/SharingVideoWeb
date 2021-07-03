@@ -1,5 +1,5 @@
 <template>
-    <nav id="sidebar" class="" onresize="resizeDetected()">
+    <nav id="sidebar" class="">
         <SideBarDetail filename="Logo.png"></SideBarDetail>
         <div id="menuToggle" class="text-center align-self-center" onClick="menuToggle();">
           <span></span>
@@ -7,10 +7,16 @@
           <span></span>
         </div>
         <div id="menu-bar" class="menu-bar">
-          <SideBarDetail @toggle-click="greet" id="create" filename="Add-Icon.svg" text="Create"></SideBarDetail>
-          <SideBarDetail @toggle-click="greet" id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
+          <router-link to="/editing/browsefile">
+            <SideBarDetail @toggle-click="greet" id="create" filename="Add-Icon.svg" text="Create"></SideBarDetail>
+          </router-link>
+          <router-link to="/editing/mymedia">
+            <SideBarDetail @toggle-click="greet" id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
+          </router-link>
           <SideBarDetail @toggle-click="greet" id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
-          <SideBarDetail @toggle-click="greet" id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
+          <router-link to="/editing/filter">
+            <SideBarDetail @toggle-click="greet" id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
+          </router-link>
         </div>
     </nav>
 </template>
