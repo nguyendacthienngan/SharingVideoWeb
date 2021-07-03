@@ -38,15 +38,15 @@ export default {
     menuToggleElement.addEventListener('click',menuToggle)
     window.addEventListener('resize', resizeDetected);
     function resizeDetected(){
-      if (window.innerWidth > 576 && menubarElement.style.display == "none")
+      if (window.innerWidth > 768 && menubarElement.style.display == "none")
         menubarElement.style.display = "block"
-      else if (window.innerWidth <= 576 )
+      else if (window.innerWidth <= 768 )
       {
         menubarElement.style.display = "none"
       }
     }
     function menuToggle(){
-      if (window.innerWidth <= 576)
+      if (window.innerWidth <= 768)
       {
         if (menubarElement.style.display == "block")
           menubarElement.style.display = "none"

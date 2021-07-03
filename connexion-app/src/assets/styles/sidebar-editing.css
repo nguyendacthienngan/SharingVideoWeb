@@ -13,7 +13,7 @@
 .video-editing{
     display: flex;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     .menu-toggle{
         
     }
@@ -91,7 +91,7 @@
     }
   }
 
-@media only screen and (min-width: 576px){
+@media only screen and (min-width: 768px){
     .nav-component{
         padding: 30px;
         border-bottom: 1px solid rgba(196, 196, 196,60);
