@@ -17,90 +17,60 @@
         
             </div>
         </div>
-        <div class="comment-section container">
-            <div class="row">
+        <div class="comment-section container"  style="position: relative">
+            <div class="row" style="position: relative">
                 <div class="col-10">
-                    <CommentBar></CommentBar>
+                    <form class="d-flex form-control input-container comment-bar" v-on:click="isHidden = !isHidden">
+                        <span class="fa fa-at icon"  width="20px" height="20px" v-on:click="isHidden = !isHidden" style="cursor:pointer">
+
+                        </span>
+                        <!-- <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px"> -->
+                        <input id="search_in_navbar" class="" type="search" placeholder="Search" aria-label="Search">
+                    </form>
                 </div>
                 <div class="col-2">
-                    <span class=" row align-items-center post-button h-100">
+                    <span class=" row align-items-center post-button h-100" style="cursor:pointer">
                         <b class="col">Post</b>
                     </span>
                 </div>
+                <div v-if="!isHidden" class="tag-people-component">
+                    <div class="d-flex list-users">
+                        <div class="d-flex">
+                            <img src="../../assets/images/Account.png" width="41px" height="41px">
+                            <p><b>User</b> username</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="../../assets/images/Account.png" width="41px" height="41px">
+                            <p><b>User</b> username</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="../../assets/images/Account.png" width="41px" height="41px">
+                            <p><b>User</b> username</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <br>
+            <br>
+
         </div>
     </div>
     
 </template>
-<style >
-.list-comments{
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    height: 360px;
-}
-.post-button{
-    color: #FF0000;
-    margin: auto;
-}
-/* SCROLL BAR */
-/* total width */
-.list-comments::-webkit-scrollbar {
-    background-color: #fff;
-    width: 16px;
-}
-
-/* background of the scrollbar except button or resizer */
-.list-comments::-webkit-scrollbar-track {
-    background-color: #fff;
-}
-
-/* scrollbar itself */
-.list-comments::-webkit-scrollbar-thumb {
-    background-color: #babac0;
-    border-radius: 16px;
-    border: 4px solid #fff;
-}
-
-/* set button(top and bottom of the scrollbar) */
-.list-comments::-webkit-scrollbar-button {
-    display:none;
-}
-
-
-.filters::-webkit-scrollbar {
-    background-color: #fff;
-    width: 16px;
-}
-
-/* background of the scrollbar except button or resizer */
-.list-comments::-webkit-scrollbar-track {
-    background-color: #fff;
-}
-
-/* scrollbar itself */
-.list-comments::-webkit-scrollbar-thumb {
-    background-color: #babac0;
-    border-radius: 16px;
-    border: 4px solid #fff;
-}
-
-/* set button(top and bottom of the scrollbar) */
-.list-comments::-webkit-scrollbar-button {
-    display:none;
-}
-</style>
+<style src="../../assets/styles/comment-section.css"></style>
+<style src="../../assets/styles/comment-bar.css"></style>
 <script>
-import CommentBar from '../common/CommentBar.vue'
+// import CommentBar from '../common/CommentBar.vue'
 import Comment from '../comment/Comment.vue'
 export default {
     components: {
-        CommentBar,
+        // CommentBar,
         Comment
-
     },
-    setup() {
-        
-    },
+    data: function(){
+       return {
+           isHidden: true
+        }
+    }
 }
 </script>

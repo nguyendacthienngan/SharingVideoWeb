@@ -1,16 +1,3 @@
-<template>
-    <form class="d-flex form-control input-container comment-bar">
-        <span class="fa fa-at icon" width="20px" height="20px"></span>
-        <!-- <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px"> -->
-        <input id="search_in_navbar" class="" type="search" placeholder="Search" aria-label="Search">
-    </form>
-</template>
-<script>
-export default {
-    
-}
-</script>
-<style scoped>
 
 .input-container {
     background: #C4C4C499 !important;
@@ -40,4 +27,3 @@ input[type="search"], input[type="text"], textarea, select {
     margin: auto;
     margin-right: 5px;
 }
-</style>

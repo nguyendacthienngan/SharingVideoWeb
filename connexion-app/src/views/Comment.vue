@@ -1,6 +1,6 @@
 <template>
     <div class="row comment-view">
-        <div class="col-md-6 order-2 order-lg-1 left-video">
+        <div class="col-md-6 order-2 order-md-1 left-video">
             <router-link to="/" class="d-none d-sm-block">
                  <span class="fa fa-times fa-2x exit-button"></span>
             </router-link>
@@ -10,7 +10,7 @@
                 <br>
             </div>
         </div>
-        <div class="col-md-6 order-1 order-lg-2 right-post">
+        <div class="col-md-6 order-1 order-md-2 right-post">
             <div class="container">
                 <div class="card non-border">
                     <div class="card-header container bg-white ">
