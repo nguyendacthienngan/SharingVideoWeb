@@ -1,3 +1,4 @@
+
 [id=pattern]:checked ~ div:before {
   position: absolute;
   content: "";

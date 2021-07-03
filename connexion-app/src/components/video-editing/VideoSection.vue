@@ -1,9 +1,10 @@
 <template>
-  <div class="row">
-    <div class="col-md-6 right-border filters order-2 order-md-1">
-      <Filters></Filters>
+  <div class="row ">
+    <div class="col-md-5 right-border filters order-2 order-md-1 ">
+      <router-view></router-view>
+      <!-- <Filters></Filters> -->
     </div>
-    <div class="col-md-6 text-center order-1 order-md-2 video-embded-component ">
+    <div class="col-md-7 text-center order-1 order-md-2 video-embded-component ">
       <div class="row headline-video ">
         <div class="col-6 ">
           <div class="input-group video-title">
@@ -33,13 +34,13 @@
 <script>
 import Video from './Video.vue'
 import Button from '../common/Button.vue'
-import Filters from './filters/Filters.vue'
+// import Filters from './filters/Filters.vue'
 import VideoPlayer from './VideoPlayer.vue'
 export default {
   components: {
     Video,
     Button,
-    Filters,
+    // Filters,
     VideoPlayer
   },
   mounted(){

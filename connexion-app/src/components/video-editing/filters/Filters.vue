@@ -5,10 +5,13 @@
             <input type="text" class="form-control" placeholder="Search">
             <!-- <span class="fa fa-search form-control-feedback "></span> -->
         </div>
-        <FilterDetail id="ocean1" title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
-        <FilterDetail id="ocean2" title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
-        <FilterDetail id="ocean3" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
-        <FilterDetail id="ocean4" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+        <div class="">
+            <FilterDetail id="ocean1" title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
+            <FilterDetail id="ocean2" title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
+            <FilterDetail id="ocean3" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+            <FilterDetail id="ocean4" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+            
+        </div>
         
         <!-- <div class="filter-title">
             Ocean Theme
@@ -37,6 +40,7 @@ export default {
 }
 </script>
 <style>
+
     .has-search .form-control{
         border-radius: 15px;
         border: 1px solid black;
