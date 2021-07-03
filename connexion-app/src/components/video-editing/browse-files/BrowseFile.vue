@@ -3,14 +3,14 @@
         <div class="helper"></div>
         <div class="drop display-inline align-center" @dragover.prevent @drop="onDrop">
             <div class="helper"></div>
-            <label v-if="!image" class="btn display-inline">
+            <label class="btn display-inline">
             <img src="../../../assets/images/Folder_Black.png" width="90px" height="90px" style="max-width: 90px">
 
             <p class="padding-20">Drag and drop files from your computer, or <b>browse files</b></p>
-                <input type="file" name="image" @change="onChange">
+                <input type="file" name="video" @change="onChange">
             </label>
-            <div class="hidden display-inline align-center" v-else v-bind:class="{ 'image': true }">
-                <img :src="image" alt="" class="img" />
+            <div class="display-inline align-center">
+                <video  id="video-drag" alt="" class="img"/>
                 <br>
                 <br>
                 <button class="btn" @click="removeFile">REMOVE</button>
@@ -24,7 +24,7 @@
 export default{
     el: 'browse',
     data: function() {
-      return {image: ''}
+      return {video: ''}
     },
     methods: {
       onDrop: function(e) {
@@ -38,23 +38,47 @@ export default{
         this.createFile(files[0]);
       },
       createFile(file) {
-        if (!file.type.match('image.*')) {
-          alert('Select an image');
-          return;
+        // if (!file.type.match('video.*')) {
+        //   alert('Select an video');
+        //   return;
+        // }
+        if (!file)
+        { 
+            alert("Failed to load file");
         }
-        var img = new Image();
-        var reader = new FileReader();
-        var vm = this;
+        else
+        {
+            var reader = new FileReader();
 
-        reader.onload = function(e) {
-          vm.image = e.target.result;
+            var vm = this;
+
+            reader.onload = function(e) {
+              // vm.video = e.target.result;
+
+              // The file reader gives us an ArrayBuffer:
+              let buffer = e.target.result;
+              var uint8Array  = new Uint8Array(buffer);
+              var arrayBuffer = uint8Array.buffer;
+              var blob        = new Blob([arrayBuffer]);
+              let url = URL.createObjectURL(blob);
+              vm.video= url;
+
+              var vid = document.getElementById('video-drag')
+              vid.src = url
+              vid.load()
+            }
+            reader.readAsArrayBuffer(file);
+            // reader.readAsDataURL(file);
+
         }
-        reader.readAsDataURL(file);
+       
+
       },
       removeFile() {
-        this.image = '';
+        this.video = '';
       }
-    }
+    },
+    
   };
 
 </script>
