@@ -66,7 +66,6 @@
             var startTime, endTime
             window.addEventListener('resize', resizeDetected);
             function resizeDetected(){
-                console.log("Hello")
                 btnPlayPause = (btnPlayPauses[0].offsetWidth > 0 && btnPlayPauses[0].offsetHeight > 0) ? btnPlayPauses[0] : btnPlayPauses[1]
                 btnPause = (btnPauses[0].offsetWidth > 0 && btnPauses[0].offsetHeight > 0) ? btnPauses[0] : btnPauses[1]
                 progressBar = (progressBars[0].offsetWidth > 0 && progressBars[0].offsetHeight > 0) ? progressBars[0] : progressBars[1]

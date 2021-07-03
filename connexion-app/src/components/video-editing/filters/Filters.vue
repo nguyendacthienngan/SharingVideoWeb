@@ -9,26 +9,9 @@
             <FilterDetail id="ocean1" title="Ocean Theme" filter_1="grayscale" filter_2="sepia" filter_3="hue-rotate"></FilterDetail>
             <FilterDetail id="ocean2" title="Ocean Theme" filter_1="tint" filter_2="inkwell" filter_3="blur"></FilterDetail>
             <FilterDetail id="ocean3" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
-            <FilterDetail id="ocean4" title="Ocean Theme" filter_1="opacity" filter_2="brightness" filter_3="combo"></FilterDetail>
+            <FilterDetail id="ocean4" title="Ocean Theme" filter_1="contrast" filter_2="invert" filter_3="combo"></FilterDetail>
             
         </div>
-        
-        <!-- <div class="filter-title">
-            Ocean Theme
-        </div>
-        <div class="filter row">
-            
-            <div id="contrast" class="col-md">
-                <img src="../assets/images/sample/Filter_1.png" width="77px" height="79px">
-            </div>
-        </div> -->
-        <!-- <input type="checkbox" name="filter" id="pattern" checked /> 
-        <label for="pattern">Pattern</label>
-
-        <input type="radio" name="filter" id="none" /> 
-        <label for="none">None</label> -->
-
-       
     </div>
 </template>
 <script>

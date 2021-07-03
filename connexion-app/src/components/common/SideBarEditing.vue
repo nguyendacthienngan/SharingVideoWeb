@@ -1,7 +1,7 @@
 <template>
     <nav id="sidebar" class="">
         <SideBarDetail filename="Logo.png"></SideBarDetail>
-        <div id="menuToggle" class="text-center align-self-center" onClick="menuToggle();">
+        <div id="menuToggle" class="text-center align-self-center" >
           <span></span>
           <span></span>
           <span></span>
