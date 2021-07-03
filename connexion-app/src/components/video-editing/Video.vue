@@ -10,15 +10,16 @@
 <script>
     export default {
         mounted() {
-           
             var player       = document.getElementById('video-element');
             var btnPlayPauses = document.getElementsByClassName('btnPlayPause')
             var btnPlayPause = (btnPlayPauses[0].offsetWidth > 0 && btnPlayPauses[0].offsetHeight > 0) ? btnPlayPauses[0] : btnPlayPauses[1]
 
             var btnPauses = document.getElementsByClassName('btnPause')
             var btnPause = (btnPauses[0].offsetWidth > 0 && btnPauses[0].offsetHeight > 0) ? btnPauses[0] : btnPauses[1]
+            btnPauses[0].style.display = "none"
+            btnPauses[1].style.display = "none"
 
-            var progressBars = document.getElementsByClassName('progress-bar')
+            var progressBars = document.getElementsByClassName('slider')
             var progressBar = (progressBars[0].offsetWidth > 0 && progressBars[0].offsetHeight > 0) ? progressBars[0] : progressBars[1]
 
             var currentTimes = document.getElementsByClassName('current-time')
@@ -86,7 +87,8 @@
                     if (playPromise !== undefined) {
                         playPromise.then(_ => {
                             player.muted = false
-                            changeButtonType(btnPlayPause, btnPause)
+                            changeButtonType(btnPlayPauses[0], btnPauses[0])
+                            changeButtonType(btnPlayPauses[1], btnPauses[1])
                         })
                         .catch(error => {
                             alert(error)
@@ -96,7 +98,8 @@
                 else 
                 {
                     var pausePromise = player.pause();
-                    changeButtonType(btnPause, btnPlayPause);
+                    changeButtonType(btnPauses[0], btnPlayPauses[0]);
+                    changeButtonType(btnPauses[1], btnPlayPauses[1]);
                 
                     if (pausePromise !== undefined) {
                         pausePromise.then(_ => {
@@ -164,14 +167,16 @@
             function stopVideo() {
                 player.pause();
                 if (player.currentTime) player.currentTime = 0;
-                changeButtonType(btnPause, btnPlayPause);
+                changeButtonType(btnPauses[0], btnPlayPauses[0]);
+                changeButtonType(btnPauses[1], btnPlayPauses[1]);
             }
             function rewindVideo(){
                 player.currentTime -= 10
                 if (player.currentTime == 0)
                 {
                     player.pause();
-                    changeButtonType(btnPause, btnPlayPause);
+                    changeButtonType(btnPauses[0], btnPlayPauses[0]);
+                    changeButtonType(btnPauses[1], btnPlayPauses[1]);
                 }
             }
             function fastForwardVideo(){
@@ -179,13 +184,15 @@
                 if (player.currentTime == player.duration)
                 {
                     player.pause();
-                    changeButtonType(btnPause, btnPlayPause);
+                    changeButtonType(btnPauses[0], btnPlayPauses[0]);
+                    changeButtonType(btnPauses[1], btnPlayPauses[1]);
                 }
             }
             function endVideo() {
                 player.pause();
                 if (player.currentTime) player.currentTime = player.duration;
-                changeButtonType(btnPause, btnPlayPause);
+                changeButtonType(btnPauses[0], btnPlayPauses[0]);
+                changeButtonType(btnPauses[1], btnPlayPauses[1]);
             }
             
         }

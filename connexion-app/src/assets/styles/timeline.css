@@ -206,11 +206,11 @@
   margin-right: 15px;
 }
 
-#btnPlayPause {
+.btnPlayPause {
   cursor: pointer;
 }
 
-#btnPause {
+.btnPause {
   cursor: pointer;
   display: none;
 }
@@ -231,16 +231,16 @@
   transform: rotate(90deg);
 }
 
-#quickRestart{
+.quickRestart{
   cursor: pointer;
 }
-#rewind{
+.rewind{
   cursor: pointer;
 }
-#forward{
+.forward{
   cursor: pointer;
 }
-#skipTrack{
+.skipTrack{
   cursor: pointer;
 }
 
