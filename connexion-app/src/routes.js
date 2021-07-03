@@ -4,7 +4,8 @@ import Editing from './views/Editing.vue'
 import Home from './views/Home.vue'
 import Comment from './views/Comment.vue'
 import Search from './components/discover/Search.vue'
-import Post from './components/home/Post.vue'
+import Posts from './components/home/Posts.vue'
+import Trending from './components/discover/Trending.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,8 @@ export const router = new VueRouter({
             redirect: '/post',
             children: [
                 {path: '/search', component: Search },
-                {path: '/post', component: Post },
+                {path: '/post', component: Posts },
+                {path: '/trending', component: Trending}
             ]
         },
         {path: '/editing', component: Editing},

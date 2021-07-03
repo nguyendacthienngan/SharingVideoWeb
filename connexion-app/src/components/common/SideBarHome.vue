@@ -27,7 +27,7 @@
 </template>
 <script>
 import Accounts from '../home/Accounts.vue'
-import Discover from '../discover/Discover.vue'
+import Discover from '../discover/DiscoverSideBar.vue'
 export default {
     components: {
         Accounts,
