@@ -12,16 +12,19 @@
                 <i class="fa fa-sort-down "></i>
             </b-button>
         </div>
-        <b-collapse :id="id" v-model="visible" class="mt-2 filter space-between">
-        <div :id="filter_1" class="">
-                <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px">
+        <b-collapse :id="id" v-model="visible" class="mt-2 filter row text-center">
+            <div class="col  ">
+                 <div :id="filter_1">
+                    <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px" style="object-fit: scale-down">
+                </div>
+                <div :id="filter_2" class="">
+                <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px" style="object-fit: scale-down">
+                </div>
+                <div :id="filter_3" class="">
+                    <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px"  style="object-fit: scale-down">
+                </div>
             </div>
-            <div :id="filter_2" class="">
-               <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px">
-            </div>
-            <div :id="filter_3" class="">
-                <img src="../../../assets/images/sample/Filter_1.png" width="120px" height="122px">
-            </div>
+           
 
         </b-collapse>
         
@@ -38,23 +41,22 @@ export default {
 }
 </script>
 <style>
-.space-between{
-    display: flex !important;
-    justify-content: space-between !important;
-}
-    .filter div{
-        display:flex;
-        justify-content: center;
-    
-    }
     @media only screen and (min-width: 576px) {
         .filter div{
+            justify-content: space-between  !important;
+            display:flex !important;
         }
     }
     @media only screen and (max-width: 576px) {
+        .filter-title{
+            text-align: center;
+
+        }
         .filter div{
             margin-bottom: 20px;
-            /* justify-content: left; */
+            display:block  !important;
+            text-align: center;
+
         }
     }
     #filter-show-button{
