@@ -29,7 +29,7 @@
     /* display: none; */
 }
 
-.list-users{
+.list-users{    
     display: flex;
     flex-direction: column !important; 
     /* align-items: flex-start; */
@@ -37,10 +37,17 @@
 .list-users .d-flex{
     margin-bottom: 15px;
 }
+.list-users .d-flex:hover{
+    margin-bottom: 15px;
+    background-color: lightgray;
+    cursor: pointer;
+}
 .list-users .d-flex img {
     margin-right: 10px;
 }
-
+.user-selected {
+    background-color: lightgray
+}
 /* SCROLL BAR */
 /* total width */
 .list-comments::-webkit-scrollbar {
