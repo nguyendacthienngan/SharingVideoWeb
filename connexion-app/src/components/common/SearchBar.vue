@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="d-flex form-control input-container " >
+        <form class="d-flex form-control input-container "  @submit="onFormSubmit">
             <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px">
             <input 
                 @input="onSearchChange" 
@@ -35,6 +35,25 @@ export default {
         
     },
     methods:{
+        onFormSubmit(e) {   
+            if(this.currentComment === "" || !this.isSendComment)  return
+            this.$router.push('/search')
+            //create new comment and clear input after that
+            // const newComment = {
+            //     id: this.allComments.length,
+            //     name: "INT01–刘宇",
+            //     username: "@into1_liuyu_",
+            //     caption: this.currentComment,
+            //     bg_music: "Crazy Frog"
+            // }
+            // this.allComments.push(newComment)
+            // this.currentComment = ""
+            
+            // //scrol to bottom after submitting comment
+            // this.$nextTick(() => {
+            //     this.scrollToEnd()
+            // })
+        },
         onUserSelected(user) {
             this.currentComment += user.username
             this.isHidden = !this.isHidden
@@ -72,7 +91,7 @@ export default {
         onSelectAnotherUsername(e) {
             if(e.key === "Enter") {
                 if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
-                    this.currentComment = this.currentComment + this.suggestedUsernames.all[this.suggestedUsernames.current].username.slice(1)
+                    this.currentComment =  this.suggestedUsernames.all[this.suggestedUsernames.current].username
                     this.isSendComment = false
                 }
                 if(this.isHidden)    this.isSendComment = true
