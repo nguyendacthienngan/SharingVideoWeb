@@ -1,7 +1,8 @@
 .list-comments{
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 360px;
 }
 .post-button{
@@ -26,10 +27,11 @@
     position: absolute;
     left: 20px;
     bottom: 50px;
-    /* display: none; */
+    height: 300px;
+    overflow: scroll;
 }
 
-.list-users{
+.list-users{    
     display: flex;
     flex-direction: column !important; 
     /* align-items: flex-start; */
@@ -37,12 +39,33 @@
 .list-users .d-flex{
     margin-bottom: 15px;
 }
+.list-users .d-flex:hover{
+    margin-bottom: 15px;
+    background-color: lightgray;
+    cursor: pointer;
+}
 .list-users .d-flex img {
     margin-right: 10px;
+}
+.user-selected {
+    background-color: lightgray;
+}
+.icon-button {
+    cursor: pointer;
+    background-color: white;
+    border-radius:50%;
+    border: none;
+    margin-right: 10px;
+}
+.icon-button:hover {
+    background-color: lightgray;
 }
 
 /* SCROLL BAR */
 /* total width */
+.list-comments {
+    word-break: break-all;
+}
 .list-comments::-webkit-scrollbar {
     background-color: #fff;
     width: 16px;
