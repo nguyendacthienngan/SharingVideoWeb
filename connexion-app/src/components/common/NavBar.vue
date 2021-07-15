@@ -8,9 +8,8 @@
             </router-link>
           </div>
           <div class="col-md-4 order-md-2 order-4 d-none d-md-block">
-            <router-link to="/search">
-              <SearchBar></SearchBar>
-            </router-link>
+            <SearchBar></SearchBar>
+            
           </div>
           <div class="col-4 d-flex justify-content-end order-2 d-md-none">
             <button v-on:click="toggle" class="d-md-none menu-toggle">
