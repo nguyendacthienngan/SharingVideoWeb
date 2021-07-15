@@ -43,13 +43,13 @@ export default {
         onSearchChange(e) {
             const val = e.target.value
             if(val){
-                if(val[val.length-1] === "@")   {
-                    this.isHidden = false
-                    this.generateSuggestedUsernames(val)
-                    return
-                }
+                // if(val[val.length-1] === "@")   {
+                //     this.isHidden = false
+                //     this.generateSuggestedUsernames(val)
+                //     return
+                // }
                 for(let u of this.allUsernames){
-                    const tempVal = "@" + val.split("@")[1]
+                    const tempVal = val
                     if(u.username.includes(tempVal)){
                         this.isHidden = false
                         this.generateSuggestedUsernames(tempVal)
@@ -71,8 +71,8 @@ export default {
         },
         onSelectAnotherUsername(e) {
             if(e.key === "Enter") {
-                if(this.suggestedUsernames.all[this.suggestedUsernames.current] && this.currentComment.indexOf("@") === this.currentComment.length - 1) {
-                    this.currentComment = this.currentComment.split("@")[0] + "@" + this.suggestedUsernames.all[this.suggestedUsernames.current].username.slice(1)
+                if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
+                    this.currentComment = this.currentComment + this.suggestedUsernames.all[this.suggestedUsernames.current].username.slice(1)
                     this.isSendComment = false
                 }
                 if(this.isHidden)    this.isSendComment = true
@@ -96,7 +96,7 @@ export default {
         }
     },
     mounted() {
-        // window.addEventListener('keydown', this.onSelectAnotherUsername)
+        window.addEventListener('keydown', this.onSelectAnotherUsername)
 
         //scrol to bottom at first render
         // this.$nextTick(() => this.scrollToEnd())
@@ -107,18 +107,18 @@ export default {
            isSendComment: false,
            currentComment: "",
            allUsernames: [
-               { id: 1, username: "@ndt_ngan" },
-               { id: 2, username: "@nl_bach" },
-               { id: 3, username: "@ct_dung" },
-               { id: 4, username: "@th_toan" },
-               { id: 5, username: "@nc_thanh" },
-               { id: 6, username: "@pn_thinh" },
-               { id: 7, username: "@nn_long" },
-               { id: 8, username: "@ub_tien" },
-               { id: 9, username: "@tm_hieu" },
-               { id: 10, username: "@tp_duy" },
-               { id: 11, username: "@dnu_phuong" },
-               { id: 12, username: "@ntq_ngan" },
+               { id: 1, username: "ndt_ngan" },
+               { id: 2, username: "nl_bach" },
+               { id: 3, username: "ct_dung" },
+               { id: 4, username: "th_toan" },
+               { id: 5, username: "nc_thanh" },
+               { id: 6, username: "pn_thinh" },
+               { id: 7, username: "nn_long" },
+               { id: 8, username: "ub_tien" },
+               { id: 9, username: "tm_hieu" },
+               { id: 10, username: "tp_duy" },
+               { id: 11, username: "dnu_phuong" },
+               { id: 12, username: "ntq_ngan" },
            ],
            suggestedUsernames: {
                all: [],
