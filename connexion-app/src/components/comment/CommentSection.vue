@@ -31,7 +31,7 @@
                                 spellcheck="false"
                             >
                         </div>
-                        <span class=" row align-items-center post-button h-100" style="cursor:pointer">
+                        <span class=" row align-items-center post-button h-100" style="cursor:pointer"  @click="postComment">
                             <b class="col">Post</b>
                         </span>
                     </form>
@@ -72,13 +72,30 @@ export default {
         Comment
     },
     methods: {
+        postComment(){
+           if(this.currentComment === "")  return
+            //create new comment and clear input after that
+            const newComment = {
+                id: this.allComments.length,
+                name: "INT01–刘宇",
+                username: "@into1_liuyu_",
+                caption: this.currentComment,
+                bg_music: "Crazy Frog"
+            }
+            this.allComments.push(newComment)
+            this.currentComment = ""
+            
+            //scrol to bottom after submitting comment
+            this.$nextTick(() => {
+                this.scrollToEnd()
+            }) 
+        },
         scrollToEnd() {
             const content = this.$refs.commentContainer;
             content.scrollTop = content.scrollHeight
         },
         onFormSubmit(e) {   
             if(this.currentComment === "" || !this.isSendComment)  return
-
             //create new comment and clear input after that
             const newComment = {
                 id: this.allComments.length,
