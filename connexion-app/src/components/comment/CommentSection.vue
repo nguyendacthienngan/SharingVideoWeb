@@ -20,6 +20,7 @@
                         <!-- <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px"> -->
                         <div class="d-flex form-control input-container comment-bar mr-3">
                             <input 
+                             @input="onCommentChange" 
                                 ref="commentInput"
                                 v-model="currentComment" 
                                 id="search_in_navbar" 
@@ -41,7 +42,7 @@
                 <div v-if="!isHidden" class="tag-people-component">
                     <div class="d-flex list-users">
                         <div 
-                            v-for="u in allUsernames" 
+                            v-for="u in suggestedUsernames.all" 
                             :key="u.id" 
                             class="d-flex"
                             :class="[u.selected ? 'user-selected' : '']"
@@ -76,7 +77,7 @@ export default {
             content.scrollTop = content.scrollHeight
         },
         onFormSubmit(e) {   
-            if(this.currentComment === "")  return
+            if(this.currentComment === "" || !this.isSendComment)  return
 
             //create new comment and clear input after that
             const newComment = {
@@ -96,6 +97,7 @@ export default {
         },
         showSuggestions() {
             this.isHidden = !this.isHidden
+            this.suggestedUsernames.all = this.allUsernames
             this.moveViewportToCavetPos()
         },
         onUserSelected(user) {
@@ -109,10 +111,64 @@ export default {
                 commentInput.focus()
                 commentInput.selectionStart = commentInput.selectionEnd = this.currentComment.length;
             })
+        },
+        onCommentChange(e) {
+            const val = e.target.value
+            if(val){
+                if(val[val.length-1] === "@")   {
+                    this.isHidden = false
+                    this.generateSuggestedUsernames(val)
+                    return
+                }
+                for(let u of this.allUsernames){
+                    const tempVal = "@" + val.split("@")[1]
+                    if(u.username.includes(tempVal)){
+                        this.isHidden = false
+                        this.generateSuggestedUsernames(tempVal)
+                        return
+                    }
+                }
+            }
+            this.isHidden = true
+        },
+        generateSuggestedUsernames(tagUsername) {
+            this.suggestedUsernames.current = 0
+            this.suggestedUsernames.all = this.allUsernames.filter(u => u.username.includes(tagUsername))
+            if(this.suggestedUsernames.all.length === 0)  this.suggestedUsernames.all = this.allUsernames
+            this.suggestedUsernames.all = this.suggestedUsernames.all.slice(0, 3).map((u, i) => {
+                u.selected = i===0
+                return u
+            })
+            
+        },
+        onSelectAnotherUsername(e) {
+            if(e.key === "Enter") {
+                if(this.suggestedUsernames.all[this.suggestedUsernames.current] && this.currentComment.indexOf("@") === this.currentComment.length - 1) {
+                    this.currentComment = this.currentComment.split("@")[0] + "@" + this.suggestedUsernames.all[this.suggestedUsernames.current].username.slice(1)
+                    this.isSendComment = false
+                }
+                if(this.isHidden)    this.isSendComment = true
+                else    this.isSendComment = false
+
+                this.isHidden = true
+                return
+            }
+
+
+            if(e.key === "ArrowUp") this.suggestedUsernames.current --
+            if(e.key === "ArrowDown") this.suggestedUsernames.current ++
+
+            if(this.suggestedUsernames.current < 0) this.suggestedUsernames.current=2
+            if(this.suggestedUsernames.current > 2) this.suggestedUsernames.current=0
+            
+            this.suggestedUsernames.all = this.suggestedUsernames.all.map((u, i) => {
+                u.selected = i===this.suggestedUsernames.current
+                return u
+            })
         }
     },
     mounted() {
-        // window.addEventListener('keydown', this.onSelectAnotherUsername)
+        window.addEventListener('keydown', this.onSelectAnotherUsername)
 
         //scrol to bottom at first render
         this.$nextTick(() => this.scrollToEnd())
@@ -120,7 +176,7 @@ export default {
     data: function(){
        return {
            isHidden: true,
-        //    isSendComment: false,
+           isSendComment: false,
            currentComment: "",
            allComments: [
                {
@@ -193,7 +249,11 @@ export default {
                { id: 10, username: "@tp_duy" },
                { id: 11, username: "@dnu_phuong" },
                { id: 12, username: "@ntq_ngan" },
-           ]
+           ],
+           suggestedUsernames: {
+               all: [],
+               current: 0,
+           }
         }
     }
 }
