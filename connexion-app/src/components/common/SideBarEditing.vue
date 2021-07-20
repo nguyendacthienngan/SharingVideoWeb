@@ -7,9 +7,8 @@
           <span></span>
         </div>
         <div id="menu-bar" class="menu-bar">
-          <router-link to="/editing/browsefile">
-            <SideBarDetail @toggle-click="greet" id="create" filename="Add-Icon.svg" text="Create"></SideBarDetail>
-          </router-link>
+          <SideBarDetail v-b-modal.browseFile id="create" filename="Add-Icon.svg" text="Create"></SideBarDetail>
+          <browse-file/>
           <router-link to="/editing/mymedia">
             <SideBarDetail @toggle-click="greet" id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
           </router-link>
@@ -22,10 +21,12 @@
 </template>
 
 <script>
+import BrowseFile from '../video-editing/browse-files/BrowseFile.vue'
 import SideBarDetail from './SideBarDetailEditing.vue'
 export default {
   components: {
-    SideBarDetail
+    SideBarDetail,
+    BrowseFile
   },
   methods: {
     greet: function (event) {

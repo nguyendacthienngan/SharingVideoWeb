@@ -1,7 +1,15 @@
+
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
+
 import App from './App.vue'
 import { router } from './routes'
+
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'

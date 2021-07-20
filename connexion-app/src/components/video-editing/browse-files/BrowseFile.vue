@@ -1,5 +1,6 @@
 <template>
-    <div class="drop  drag-component">
+    <b-modal ref="browseFile"  id="browseFile" title="Browse File">
+        <div class="drop  drag-component">
         <div class="helper"></div>
         <div class="drop display-inline align-center" @dragover.prevent @drop="onDrop">
             <div class="helper"></div>
@@ -9,24 +10,31 @@
             <p class="padding-20">Drag and drop files from your computer, or <b>browse files</b></p>
                 <input type="file" name="video" @change="onChange">
             </label>
-            <div class="display-inline align-center">
+            <!-- <div class="display-inline align-center">
                 <video  id="video-drag" alt="" class="img"/>
                 <br>
                 <br>
                 <button class="btn" @click="removeFile">REMOVE</button>
-            </div>
+            </div> -->
         </div>
     </div>
+    </b-modal>
+
+    
 </template>
 <style src="../../../assets/styles/browse-file.css">
 </style>
 <script>
 export default{
-    el: 'browse',
     data: function() {
-      return {video: ''}
+      return {
+        video: ''
+        }
     },
     methods: {
+      save: function(){
+        this.$refs['browseFile'].hide()
+      },
       onDrop: function(e) {
         e.stopPropagation();
         e.preventDefault();
@@ -68,6 +76,8 @@ export default{
               vid.load()
             }
             reader.readAsArrayBuffer(file);
+            this.save()
+            // this.$router.push('/editing/mymedia')
             // reader.readAsDataURL(file);
 
         }
@@ -78,7 +88,8 @@ export default{
         this.video = '';
       }
     },
-    
+    mounted(){
+    }
   };
 
 </script>
