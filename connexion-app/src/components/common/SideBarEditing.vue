@@ -12,7 +12,8 @@
           <router-link to="/editing/mymedia">
             <SideBarDetail @toggle-click="greet" id="folder" filename="Folder-Icon.svg" text="My Media"></SideBarDetail>
           </router-link>
-          <SideBarDetail @toggle-click="greet" id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
+          <SideBarDetail v-b-modal.recordVideo  id="record" filename="Record-Icon.svg" text="Record"></SideBarDetail>
+          <record-video/>
           <router-link to="/editing/filter">
             <SideBarDetail @toggle-click="greet" id="filter" filename="Filter-Icon.svg" text="Filter"></SideBarDetail>
           </router-link>
@@ -22,11 +23,13 @@
 
 <script>
 import BrowseFile from '../video-editing/browse-files/BrowseFile.vue'
+import RecordVideo from '../video-editing/record-video/RecordVideo.vue'
 import SideBarDetail from './SideBarDetailEditing.vue'
 export default {
   components: {
     SideBarDetail,
-    BrowseFile
+    BrowseFile,
+    RecordVideo
   },
   methods: {
     greet: function (event) {
