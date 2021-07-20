@@ -1,26 +1,28 @@
 <template>
-    <div v-if="isHidden" class="container vertical-center text-center">
+    
+    <div class="container h-100">
+      <div  id="text-empty" class="h-100 text-center" style="transform: translateY(+50%)">
         <p>Add media to get started</p>
-        
-    </div>
-    <div v-else class="container">
+      </div>
       <div  class="display-inline align-center">
-        <video  id="video-drag" alt="" class="img"/>
-        <!-- <br>
-        <br>
-        <button class="btn" @click="removeFile">REMOVE</button> -->
+        <video  id="video-drag" alt="" class="img" src=""/>
       </div>
       
     </div>
 </template>
 
 <script>
+import $ from 'jquery';
 export default {
-  data: function() {
-    return {
-      isHidden: true
-    }
-  },
+  mounted(){
+    $("#video-drag").on("loadstart", function() {
+      if ($("#video-drag").attr('src').length != 0)
+      {
+        $('#text-empty').hide()
+      }
+        
+    });
+  }
 }
 </script>
 
