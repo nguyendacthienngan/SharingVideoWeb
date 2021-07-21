@@ -4,22 +4,29 @@
         <span id="toggle-btn" @click="hideModal">
             <i class="fa fa-times fa-2x exit-button "></i>
         </span>
+        <br>
         <div class="w-100 text-center">
-
             <button v-if="!isStarted" id="start-camera" class="btn btn-primary h-100" @click="recordVideo">Start Camera</button>
-            
             <video id="recorded-video" autoplay="autoplay" muted >
                 <source type="video/webm" />
             </video>
+        </div>
+        <div class="container">
+            <div v-if="isStarted"  class="row text-center justify-content-between">
+                <div class="d-flex justify-content-start p-3 ">
+                    <button class="btn btn-new btn-cancel "  @click="hideModal">Cancel</button>
+                </div>
+                <div class="d-flex justify-content-center p-2">
+                    <img id="recordButton" src="../../../assets/images/recording.svg" width="60px" height="55px" @click="startRecord"/>
+
+                </div>
+                <div class="d-flex justify-content-end  p-3 button">
+                    <a id="download-video" download="test.webm" class="btn btn-new btn-save">Save</a>
+                </div>
             
+            </div>
         </div>
         
-        <div v-if="isStarted" class="row">
-            <button class="btn btn-primary"  @click="hideModal">Cancel</button>
-            <img src="../../../assets/images/recording.svg" width="60px" height="55px" @click="startRecord"/>
-            <a id="download-video" download="test.webm" class="btn btn-primary">Download Video</a>
-            
-        </div>
         
         </b-modal>
     </div>
@@ -28,9 +35,32 @@
     #toggle-btn{
         float: right;
     }
+    #recordButton{
+        cursor: pointer;
+    }
     #recorded-video{
         width: 100%    !important;
-        height: auto   !important;
+        height: auto   !important;  
+        margin-bottom: 5px;
+    }
+    #toggle-btn{
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    .btn-new{
+        border-radius: 15px;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .btn-cancel{
+        background-color: #DEECF1 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .btn-save{
+        background-color: #c82333 !important;
+        color: white !important;
+        padding-bottom: 0 !important;
     }
 </style>
 <script>
@@ -87,7 +117,6 @@
             }
             else
             {
-                alert("STOPPED")
                 this.media_recorder.stop(); 
                 let recordVideo = document.getElementById('recorded-video');
                 recordVideo.pause();
