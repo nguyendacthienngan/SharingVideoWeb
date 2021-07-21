@@ -6,8 +6,12 @@
         </span>
         <br>
         <div class="w-100 text-center">
-            <button v-if="!isStarted" id="start-camera" class="btn btn-primary h-100" @click="recordVideo">Start Camera</button>
-            <video id="recorded-video" autoplay="autoplay" muted >
+            <div v-if="!isStarted" style="padding: 50px">
+                <h4>Record video</h4>
+                <p>Click on the button to start recording</p>
+                <button id="start-camera" class="btn btn-primary" @click="recordVideo">Open Webcam</button>
+            </div>
+            <video style="width: 0" id="recorded-video" autoplay="autoplay" muted >
                 <source type="video/webm" />
             </video>
         </div>
@@ -39,8 +43,8 @@
         cursor: pointer;
     }
     #recorded-video{
-        width: 100%    !important;
-        height: auto   !important;  
+        /* width: 100%    !important;
+        height: auto   !important;   */
         margin-bottom: 5px;
     }
     #toggle-btn{
@@ -86,6 +90,8 @@
         async recordVideo(){
             this.isStarted = true
             let recordVideo = document.getElementById('recorded-video');
+            $('#recorded-video').animate({height:'auto', width: '100%'}, 100);
+
             this.camera_stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
             recordVideo.srcObject = this.camera_stream;
         },
@@ -127,9 +133,6 @@
         }
     },
     mounted(){
-        $('#recordVideo').on('hidden.bs.modal', function (e) {
-            alert("Hi")
-        })
     }
   }
 </script>
