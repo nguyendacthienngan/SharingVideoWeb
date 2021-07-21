@@ -5,7 +5,8 @@
             <i class="fa fa-times fa-2x exit-button "></i>
         </span>
         <div class="w-100 text-center">
-            <button id="start-camera" class="btn btn-primary h-100" @click="recordVideo">Start Camera</button>
+
+            <button v-if="!isStarted" id="start-camera" class="btn btn-primary h-100" @click="recordVideo">Start Camera</button>
             
             <video id="recorded-video" autoplay="autoplay" muted >
                 <source type="video/webm" />
@@ -16,8 +17,6 @@
         <div v-if="isStarted" class="row">
             <button class="btn btn-primary"  @click="hideModal">Cancel</button>
             <img src="../../../assets/images/recording.svg" width="60px" height="55px" @click="startRecord"/>
-            
-            <!-- <a id="download-video" download="test.webm">Download Video</a> -->
             <a id="download-video" download="test.webm" class="btn btn-primary">Download Video</a>
             
         </div>
@@ -35,6 +34,7 @@
     }
 </style>
 <script>
+    import $ from 'jquery'
   export default {
         data() {
             return {
@@ -48,6 +48,10 @@
         methods: {
         hideModal() {
             this.$refs['recordVideo'].hide()
+            this.camera_stream.getTracks().forEach(function(track) {
+                track.stop();
+            });
+             this.isStarted = false
         },
         async recordVideo(){
             this.isStarted = true
@@ -92,6 +96,11 @@
         stopRecord(){
             this.media_recorder.stop(); 
         }
+    },
+    mounted(){
+        $('#recordVideo').on('hidden.bs.modal', function (e) {
+            alert("Hi")
+        })
     }
   }
 </script>
