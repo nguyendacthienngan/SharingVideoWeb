@@ -43,7 +43,7 @@ import $ from 'jquery';
         async recordVideo(){
             
             let recordVideo = document.getElementById('recorded-video');
-            this.camera_stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            this.camera_stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
             recordVideo.srcObject = this.camera_stream;
         },
         startRecord(){
@@ -51,15 +51,19 @@ import $ from 'jquery';
             this.media_recorder = new MediaRecorder(this.camera_stream, { mimeType: 'video/webm' });
 
             // event : new recorded video blob available 
+            let vm = this;
+
             this.media_recorder.addEventListener('dataavailable', function(e) {
-                this.blobs_recorded.push(e.data);
+                vm.blobs_recorded.push(e.data);
             });
 
             // event : recording stopped & all blobs sent
             this.media_recorder.addEventListener('stop', function() {
                 // create local object URL from the recorded video blobs
-                let video_local = URL.createObjectURL(new Blob(this.blobs_recorded, { type: 'video/webm' }));
-                ($('#download-video')).href = video_local;
+                let video_local = URL.createObjectURL(new Blob(vm.blobs_recorded, { type: 'video/webm' }));
+                let download_link = document.querySelector("#download-video");
+
+                download_link.href = video_local;
             });
 
             // start recording with each recorded blob having 1 second video
