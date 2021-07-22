@@ -67,12 +67,21 @@
 <script>
 // import CommentBar from '../common/CommentBar.vue'
 import Comment from '../comment/Comment.vue'
+import Vue from 'vue'
+import $ from 'jquery'
+
 export default {
     components: {
         // CommentBar,
         Comment
     },
     methods: {
+        commentFunction(){
+            this.$nextTick(() =>{
+                const commentInput = this.$refs.commentInput
+                commentInput.focus()
+            })
+        },
         postComment(){
            if(this.currentComment === "")  return
             //create new comment and clear input after that

@@ -89,7 +89,7 @@
                     </div>
                     
                     <div class="d-none d-sm-block">
-                        <CommentSection></CommentSection>
+                        <CommentSection ref="commentSection"></CommentSection>
                     </div>
                 </div>
                 
@@ -99,7 +99,6 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
 import PostCaption from '../components/home/PostCaption.vue'
 import CommentSection from '../components/comment/CommentSection.vue'
 import $ from 'jquery'
@@ -115,6 +114,9 @@ export default {
         }
     },
     methods: {
+        commentFunction(){
+            this.$refs.commentSection.commentFunction();
+        },
         async likeFunction(){
             var element = document.getElementById("like-button");
             element.classList.add("active-button");
@@ -128,15 +130,8 @@ export default {
             else
                 this.likes = this.likes -1;
             
-        },
-        commentFunction(){
-            Vue.nextTick(function() { 
-                console.log($("#commentInput"))
-                $("#commentInput").focus();
-            });
-
-
         }
+        
     },
     mounted(){
         $('.button').mouseenter(function(i,obj){
@@ -148,7 +143,9 @@ export default {
             ($(this)).find('circle').css("fill", "#F1F1F2");
             ($(this)).find('path').css("fill", "black");
         })
-        
+        // $('#comment-button').click(function(){
+        //     this.$refs.commentSection.commentFunction();
+        // })
     }
 }
 </script>
