@@ -16,9 +16,9 @@
                     <button width="20px" height="20px" class="icon-button" @click="showSuggestions">
                         <i class="fa fa-at"></i>
                     </button>
-                    <form class="d-flex" style="flex: 1" @submit="onFormSubmit">
+                    <form class="d-flex w-100" style="flex: 1" @submit="onFormSubmit">
                         <!-- <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px"> -->
-                        <div class="d-flex form-control input-container comment-bar mr-3">
+                        <div class="d-flex form-control input-container comment-bar">
                             <input 
                              @input="onCommentChange" 
                                 ref="commentInput"
@@ -31,13 +31,13 @@
                                 spellcheck="false"
                             >
                         </div>
-                        <span class=" row align-items-center post-button h-100" style="cursor:pointer"  @click="postComment">
-                            <b class="col">Post</b>
-                        </span>
+                        
                     </form>
                 </div>
                 <div class="col-2">
-                    
+                    <span class=" row align-items-center post-button h-100 text-center" style="cursor:pointer"  @click="postComment">
+                            <b class="col">Post</b>
+                        </span>
                 </div>
                 <div v-if="!isHidden" class="tag-people-component">
                     <div class="d-flex list-users">
