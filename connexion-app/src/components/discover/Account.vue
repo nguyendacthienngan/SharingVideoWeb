@@ -1,7 +1,7 @@
 <template>
     <div class="card non-border">
         <div class="card-header container bg-white non-border">
-            <PostCaption name="INTO1–刘宇" username="@into1_liuyu_" caption="Relatively cool" bg_music="Crazy Frog"></PostCaption>
+            <PostCaption :name="name" :username="username" :caption="caption" :bg_music="bg_music"></PostCaption>
         </div>
     </div>
 </template>
@@ -10,6 +10,7 @@ import PostCaption from '../home/PostCaption.vue'
 export default {
     components:{
         PostCaption
-    }
+    },
+    props:['name', 'username', 'caption', 'bg_music']
 }
 </script>

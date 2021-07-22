@@ -57,7 +57,7 @@ export default {
         onUserSelected(user) {
             this.currentComment += user.username
             this.isHidden = !this.isHidden
-            this.moveViewportToCavetPos()
+            // this.moveViewportToCavetPos()
         },
         onSearchChange(e) {
             const val = e.target.value

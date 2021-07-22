@@ -25,6 +25,11 @@ export default {
     components:{
        NavBar,
        SideBar,
+    },
+    data(){
+       return{
+          users: []
+       }
     }
 }
 </script>
