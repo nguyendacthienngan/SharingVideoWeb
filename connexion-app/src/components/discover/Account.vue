@@ -1,7 +1,7 @@
 <template>
     <div class="card non-border">
         <div class="card-header container bg-white non-border">
-            <PostCaption :name="name" :username="username" :caption="caption" :bg_music="bg_music"></PostCaption>
+            <PostCaption :name="name" :username="username" :caption="caption"></PostCaption>
         </div>
     </div>
 </template>

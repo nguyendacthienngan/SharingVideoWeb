@@ -38,35 +38,14 @@ export default {
         onFormSubmit(e) {   
             if(this.currentComment === "" || !this.isSendComment)  return
             this.$router.push('/search')
-            //create new comment and clear input after that
-            // const newComment = {
-            //     id: this.allComments.length,
-            //     name: "INT01–刘宇",
-            //     username: "@into1_liuyu_",
-            //     caption: this.currentComment,
-            //     bg_music: "Crazy Frog"
-            // }
-            // this.allComments.push(newComment)
-            // this.currentComment = ""
-            
-            // //scrol to bottom after submitting comment
-            // this.$nextTick(() => {
-            //     this.scrollToEnd()
-            // })
         },
         onUserSelected(user) {
             this.currentComment += user.username
             this.isHidden = !this.isHidden
-            // this.moveViewportToCavetPos()
         },
         onSearchChange(e) {
             const val = e.target.value
             if(val){
-                // if(val[val.length-1] === "@")   {
-                //     this.isHidden = false
-                //     this.generateSuggestedUsernames(val)
-                //     return
-                // }
                 for(let u of this.allUsernames){
                     const tempVal = val
                     if(u.username.includes(tempVal)){
@@ -116,9 +95,6 @@ export default {
     },
     mounted() {
         window.addEventListener('keydown', this.onSelectAnotherUsername)
-
-        //scrol to bottom at first render
-        // this.$nextTick(() => this.scrollToEnd())
     },
     data: function(){
     return {

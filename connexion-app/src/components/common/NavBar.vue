@@ -53,6 +53,11 @@
 <script>
 import SearchBar from '../common/SearchBar.vue'
 export default {
+  data(){
+    return{
+      allUsers: this.$parent.$data.allUsers
+    }
+  },
   components: {
     SearchBar
   },

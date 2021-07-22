@@ -10,7 +10,8 @@
                     <br>
                     {{caption}}
                     <br>
-                    <span class="fa fa-music m-r-10"></span> <b>{{bg_music}}</b>
+                    
+                    <span v-if="bg_music" class="fa fa-music m-r-10"></span> <b>{{bg_music}}</b>
                     
                 </div>
                 <div class="col-1">
