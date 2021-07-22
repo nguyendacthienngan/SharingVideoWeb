@@ -14,15 +14,12 @@
                         <source    src="../assets/videos/LiuYu_Tiktok1.webm" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <!-- <img src="../assets/images/sample/Image_2.png" style="object-fit:contain; width: 100%" > -->
                 </div>
                 <div class="col-md-7 order-md-2 order-1">
                     <div class="w-100 ">
                         <div class="input-group mb-3 caption ">
-                            <input type="text" class="form-control no-border" placeholder="Your caption" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
+                            <input id="captionInput" type="text" class="form-control no-border" placeholder="Your caption" aria-label="Recipient's username" aria-describedby="basic-addon2">
                         </div>
-                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s -->
                     </div>
                     <div class="privacy">
                         <h2><b>Who can see this post</b></h2>
@@ -75,6 +72,12 @@ export default {
         Button
 </script>
 <style scoped>
+.form-control:focus {
+    border: 1px solid transparent
+}
+input:focus{
+  box-shadow: none;
+}
 .btn{
     border-radius: 20px;
     padding-right: 15px;
