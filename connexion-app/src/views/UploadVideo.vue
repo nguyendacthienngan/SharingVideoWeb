@@ -7,12 +7,14 @@
             <br>
             
             <div class="container">
-                <h2>
-                    Upload Video
-                </h2>
+                <br>
                 <div class="row">
-                <div class="col-md-5 order-md-1 order-2">
-                    <img src="../assets/images/sample/Image_2.png" style="object-fit:contain; width: 100%" >
+                <div class="col-md-5 order-md-1 order-2  text-center">
+                    <video muted style="object-fit:contain" width="380px">
+                        <source    src="../assets/videos/LiuYu_Tiktok1.webm" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- <img src="../assets/images/sample/Image_2.png" style="object-fit:contain; width: 100%" > -->
                 </div>
                 <div class="col-md-7 order-md-2 order-1">
                     <div class="w-100 ">
@@ -38,8 +40,8 @@
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                <label class="form-check-label" for="flexRadioDefault3">
                                     Private
                                 </label>
                             </div>
