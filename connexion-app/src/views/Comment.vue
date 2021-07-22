@@ -117,10 +117,16 @@ export default {
         async likeFunction(){
             var element = document.getElementById("like-button");
             element.classList.add("active-button");
-            this.likes = this.likes + 1;
-            $( "span.liked-text" ).toggleClass( "press", 1000 );
-            await new Promise(r => setTimeout(r, 1000));
-            $( "span.liked-text" ).removeClass( "press");
+            if (this.likes == 0)
+            {
+                $( "span.liked-text" ).toggleClass( "press", 1000 );
+                await new Promise(r => setTimeout(r, 1000));
+                $( "span.liked-text" ).removeClass( "press");
+                this.likes = this.likes + 1;
+            }
+            else
+                this.likes = this.likes -1;
+            
         },
         commentFunction(){
             //comment-form
