@@ -99,6 +99,7 @@
     </div>
 </template>
 <script>
+import Vue from 'vue'
 import PostCaption from '../components/home/PostCaption.vue'
 import CommentSection from '../components/comment/CommentSection.vue'
 import $ from 'jquery'
@@ -129,10 +130,12 @@ export default {
             
         },
         commentFunction(){
-            //comment-form
-            $('#comment-form').focus()
+            Vue.nextTick(function() { 
+                console.log($("#commentInput"))
+                $("#commentInput").focus();
+            });
 
-            $('#post-button').focus()
+
         }
     },
     mounted(){

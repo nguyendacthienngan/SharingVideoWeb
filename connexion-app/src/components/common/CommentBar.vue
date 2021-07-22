@@ -2,7 +2,7 @@
     <form class="d-flex form-control input-container comment-bar">
         <span class="fa fa-at icon" width="20px" height="20px"></span>
         <!-- <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px"> -->
-        <input id="search_in_navbar" class="" type="search" placeholder="Search" aria-label="Search">
+        <input class="search_in_navbar" type="search" placeholder="Search" aria-label="Search">
     </form>
 </template>
 <script>
@@ -20,13 +20,6 @@ export default {
 .input-container:focus {
   background-color: yellow !important;
   border: 1px solid red !important;
-}
-#search_in_navbar{
-    /* border-radius: 30px; */
-    color: #828282;
-    border: 1px solid transparent;
-    background: transparent !important;
-    width: 100%;
 }
 
 input[type="search"], input[type="text"], textarea, select { 
