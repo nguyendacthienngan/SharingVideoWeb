@@ -24,6 +24,9 @@
                         <div class="card-header container bg-white">
                             <div class="row">
                                 <div class="col text-center">
+                                    <span class="liked-text">
+                                        +1
+                                    </span>
                                     <svg id="like-button" class="button" @click="likeFunction"  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g opacity="0.9">
                                         <circle cx="24" cy="24" r="24" fill="#F1F1F2"/>
@@ -44,9 +47,8 @@
                                         </filter>
                                         </defs>
                                     </svg>
-
                                     <!-- <img id="like-button" class="button" @click="likeFunction" src="../assets/images/Like-Icon.svg" width="48px" height="48px"> -->
-                                    {{likes}}
+                                    <span class="numbers">{{likes}}</span>
                                 </div>
                                 <div class="col text-center">
                                     <svg id="comment-button" class="button" @click="commentFunction" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +73,7 @@
                                     </svg>
 
                                     <!-- <img id="comment-button" class="button" @click="commentFunction" src="../assets/images/Comment-Icon.svg" width="48px" height="48px"> -->
-                                    {{comments}}
+                                    <span class="numbers">{{comments}}</span>
                                 </div>
                                 <div class="col text-center">
                                     <svg class="button" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +82,7 @@
                                     </svg>
 
                                     <!-- <img class="button" src="../assets/images/Share-Icon.svg" width="48px" height="48px"> -->
-                                    5555
+                                    <span class="numbers">5555</span>
                                 </div>
                             </div>
                         </div>
@@ -112,24 +114,32 @@ export default {
         }
     },
     methods: {
-        likeFunction(){
+        async likeFunction(){
             var element = document.getElementById("like-button");
             element.classList.add("active-button");
             this.likes = this.likes + 1;
+            $( "span.liked-text" ).toggleClass( "press", 1000 );
+            await new Promise(r => setTimeout(r, 1000));
+            $( "span.liked-text" ).removeClass( "press");
         },
         commentFunction(){
             //comment-form
-            var element = document.getElementById("search_in_navbar");
-            console.log(element)
-            element.focus()
+            $('#comment-form').focus()
+
+            $('#post-button').focus()
         }
     },
     mounted(){
-        $('.button').hover(function(i,obj){
-            // alert("Hi")
-            ($(this)).find('circle').css("fill", "red");
-            ($(this)).find('path').css("fill", "white");
+        $('.button').mouseenter(function(i,obj){
+            ($(this)).find('circle').css("fill", "white");
+            ($(this)).find('path').css("fill", "#FE2C55");
         })
+        $('.button').mouseleave(function(i,obj){
+            // alert("Hi")
+            ($(this)).find('circle').css("fill", "#F1F1F2");
+            ($(this)).find('path').css("fill", "black");
+        })
+        
     }
 }
 </script>

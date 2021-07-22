@@ -35,7 +35,7 @@
                     </form>
                 </div>
                 <div class="col-2">
-                    <span class=" row align-items-center post-button h-100 text-center" style="cursor:pointer"  @click="postComment">
+                    <span id="post-button" class=" row align-items-center post-button h-100 text-center" style="cursor:pointer"  @click="postComment">
                             <b class="col">Post</b>
                         </span>
                 </div>

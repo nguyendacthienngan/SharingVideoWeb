@@ -27,12 +27,37 @@
 .button{
     cursor: pointer;
 }
-.active-button circle{
-    /* fill: red !important; */
+.liked-text{
+  position: absolute;
+  bottom: 30px;
+  left: -15px;
+  right: 0;
+  visibility: hidden;
+  transition: 0.6s;
+  /* z-index: -2; */
+  font-size: 15px;
+  color: transparent;
+  font-weight: 400;
 }
-/* .button circle:hover{
-    fill: red !important;
+.press{
+  bottom: 50px;
+  font-size: 14px;
+  visibility: visible;
+  animation: fade 1s;
 }
-.button path:hover{
-    fill: white !important;
-} */
+
+@keyframes fade {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #e23b3b;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+.numbers{
+  margin-left: 15px;
+}
