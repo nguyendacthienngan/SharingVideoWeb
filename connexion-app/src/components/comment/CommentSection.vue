@@ -99,6 +99,7 @@ export default {
             this.$nextTick(() => {
                 this.scrollToEnd()
             }) 
+            this.$parent.$data.comments = this.allComments.length;
         },
         scrollToEnd() {
             const content = this.$refs.commentContainer;
@@ -121,6 +122,7 @@ export default {
             this.$nextTick(() => {
                 this.scrollToEnd()
             })
+            this.$parent.$data.comments = this.allComments.length;
         },
         showSuggestions() {
             this.isHidden = !this.isHidden

@@ -110,7 +110,7 @@ export default {
     data(){
         return {
             likes: 0,
-            comments : 0,
+            comments : 8
         }
     },
     methods: {
@@ -129,7 +129,6 @@ export default {
             }
             else
                 this.likes = this.likes -1;
-            
         }
         
     },
