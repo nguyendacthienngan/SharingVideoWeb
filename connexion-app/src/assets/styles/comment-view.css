@@ -24,3 +24,15 @@
     top: 25px;
     right: 25px;
 }
+.button{
+    cursor: pointer;
+}
+.active-button circle{
+    /* fill: red !important; */
+}
+/* .button circle:hover{
+    fill: red !important;
+}
+.button path:hover{
+    fill: white !important;
+} */
