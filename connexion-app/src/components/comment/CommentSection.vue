@@ -50,7 +50,7 @@
                             @click="onUserSelected(u)"
                         >
                             <img src="../../assets/images/Account.png" width="41px" height="41px">
-                            <p>{{ u.username }}</p>
+                            <p class="h-100" style="transform: translateY(+20%)">{{ u.username }}</p>
                         </div>
                     </div>
                 </div>
