@@ -82,7 +82,7 @@
                                     </svg>
 
                                     <!-- <img class="button" src="../assets/images/Share-Icon.svg" width="48px" height="48px"> -->
-                                    <span class="numbers">5555</span>
+                                    <span class="numbers">1</span>
                                 </div>
                             </div>
                         </div>
@@ -138,13 +138,9 @@ export default {
             ($(this)).find('path').css("fill", "#FE2C55");
         })
         $('.button').mouseleave(function(i,obj){
-            // alert("Hi")
             ($(this)).find('circle').css("fill", "#F1F1F2");
             ($(this)).find('path').css("fill", "black");
         })
-        // $('#comment-button').click(function(){
-        //     this.$refs.commentSection.commentFunction();
-        // })
     }
 }
 </script>

@@ -200,7 +200,7 @@ export default {
         window.addEventListener('keydown', this.onSelectAnotherUsername)
 
         //scrol to bottom at first render
-        this.$nextTick(() => this.scrollToEnd())
+        // this.$nextTick(() => this.scrollToEnd())
     },
     data: function(){
        return {
