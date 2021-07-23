@@ -37,7 +37,9 @@ export default {
     methods:{
         onFormSubmit(e) {   
             if(this.currentComment === "" || !this.isSendComment)  return
-            this.$router.push('/search')
+            this.$router.push({
+                path: `/search/${this.currentID}`
+            })
         },
         onUserSelected(user) {
             this.currentComment += user.username
@@ -71,6 +73,7 @@ export default {
             if(e.key === "Enter") {
                 if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
                     this.currentComment =  this.suggestedUsernames.all[this.suggestedUsernames.current].username
+                    this.currentID =  this.suggestedUsernames.all[this.suggestedUsernames.current].id
                     this.isSendComment = false
                 }
                 if(this.isHidden)    this.isSendComment = true
@@ -101,6 +104,7 @@ export default {
            isHidden: true,
            isSendComment: false,
            currentComment: "",
+           currentID: 1,
            allUsernames: [
                { id: 1, username: "ndt_ngan" },
                { id: 2, username: "nl_bach" },

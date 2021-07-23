@@ -21,6 +21,7 @@ export const router = new VueRouter({
             component: Home,
             redirect: '/post',
             children: [
+                {path: '/search/:id', component: Search },
                 {path: '/search', component: Search },
                 {path: '/post', component: Posts },
                 {path: '/trending', component: Trending}
