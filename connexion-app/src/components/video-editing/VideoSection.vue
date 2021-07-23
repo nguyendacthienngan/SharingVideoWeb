@@ -18,7 +18,7 @@
           </router-link>
         </div>
       </div>
-      <div class="container">
+      <div class="">
         <Video></Video>
         <div class="d-md-none">
         <!-- <div id="player-in-small-screen"> -->

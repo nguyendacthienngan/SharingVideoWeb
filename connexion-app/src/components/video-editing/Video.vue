@@ -1,9 +1,6 @@
 <template>
     <div class="pattern">
-        <video class="video video-wrapper" id="video-element" muted>
-            <source src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
+        <video class="video video-wrapper" id="video-element" muted src="../../assets/videos/LiuYu_Tiktok1.webm" type="video/mp4">
         </video>
     </div>
 </template>
@@ -199,12 +196,13 @@
 </script>
 <style>
     .video {
-        overflow: hidden;
+        /* overflow: hidden; */
         z-index: 1;
     }
     .video-wrapper {
-        width: 100%;
-        position: relative;
+       width: 230px;
+    height: 500px;
+    /* object-fit: cover; */
     }
 
 </style>
