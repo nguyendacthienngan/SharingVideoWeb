@@ -4,6 +4,7 @@
             <img src="../../assets/images/Search-Icon.svg" class="icon" width="20px" height="20px">
             <input 
                 @input="onSearchChange" 
+                @click="showHistory"
                 v-model="currentComment" 
                 id="search_in_navbar" 
                 class="" 
@@ -35,6 +36,11 @@ export default {
         
     },
     methods:{
+        showHistory(){
+            this.suggestedUsernames.all = this.searchHistory
+            this.isHidden = false;
+            this.isShowHistory = true;
+        },
         onFormSubmit(e) {   
             if (this.currentID >=1)
             {
@@ -83,9 +89,9 @@ export default {
             
         },
         onSelectAnotherUsername(e) {
-            if(e.key === "Enter") {
-                if(this.suggestedUsernames.current >= 0)
-                {
+            if(this.suggestedUsernames.current >= 0 || this.isShowHistory)
+            {
+                if(e.key === "Enter") {
                     if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
                         this.currentComment =  this.suggestedUsernames.all[this.suggestedUsernames.current].username
                         this.currentID =  this.suggestedUsernames.all[this.suggestedUsernames.current].id
@@ -95,33 +101,44 @@ export default {
                     {
                         this.currentComment = ""
                         this.currentID = -1
-                         this.suggestedUsernames.current = -1
+                        this.suggestedUsernames.current = -1
                     }
-                    
-
-                    if(e.key === "ArrowUp") this.suggestedUsernames.current --
-                    if(e.key === "ArrowDown") this.suggestedUsernames.current ++
-
-                    if(this.suggestedUsernames.current < 0) this.suggestedUsernames.current=2
-                    if(this.suggestedUsernames.current > 2) this.suggestedUsernames.current=0
-                    
-                    this.suggestedUsernames.all = this.suggestedUsernames.all.map((u, i) => {
-                        u.selected = i===this.suggestedUsernames.current
-                        return u
-                    })
+                        
                 }
-                else
-                {
-                    this.currentComment = ""
-                    this.currentID = -1
-                    this.suggestedUsernames.current = -1
-                }
-                if(this.isHidden)    this.isSendComment = true
+               if(this.isHidden)    this.isSendComment = true
                 else    this.isSendComment = false
 
                 this.isHidden = true
-                return
+                // return
             }
+            else
+            {
+                this.currentComment = ""
+                this.currentID = -1
+                this.suggestedUsernames.current = -1
+            }
+            if(e.key === "ArrowUp") 
+            {
+                this.suggestedUsernames.current --;
+                this.isHidden = false
+            }
+
+            if(e.key === "ArrowDown")
+            {
+                this.suggestedUsernames.current ++;
+                this.isHidden = false
+
+            }
+
+            if(this.suggestedUsernames.current < 0) this.suggestedUsernames.current=2
+            if(this.suggestedUsernames.current > 2) this.suggestedUsernames.current=0
+            
+            this.suggestedUsernames.all = this.suggestedUsernames.all.map((u, i) => {
+                u.selected = i===this.suggestedUsernames.current
+                return u
+            })
+            
+        
 
         }
     },
@@ -130,6 +147,7 @@ export default {
     },
     data: function(){
     return {
+            isShowHistory:false,
            isHidden: true,
            isSendComment: false,
            currentComment: "",
@@ -151,7 +169,13 @@ export default {
            suggestedUsernames: {
                all: [],
                current: -1,
-           }
+           },
+           searchHistory:[
+               {id:1, username:'ndt_ngan'},
+               {id:2, username:'nl_bach'},
+               {id:3, username:'ct_dung'},
+               {id:4, username:'nc_thanh'},
+           ]
         }
     }
 }
