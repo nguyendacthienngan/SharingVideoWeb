@@ -6,9 +6,9 @@
                 <div class="container">
                     <div class="row" style="position: relative">
                         <div class="col-11"  style="position: relative">
-                            <h3 style="margin-bottom: 0"><b>#nanno</b></h3>
-                            <p style="margin-bottom: 0">375.6k views</p> 
-                            <p>Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!</p>
+                            <h3 style="margin-bottom: 0"><b>#{{name}}</b></h3>
+                            <p style="margin-bottom: 0">{{views}}</p> 
+                            <p>{{caption}}</p>
                         </div>
                         <div class="col-1">
                             
@@ -24,52 +24,21 @@
         </div>  
     </div>
 </template>
+
 <script>
 export default {
-    props: ['hashtag_name', 'hashtag_icon'],
-    data(){
-        return {
-            hashtags: [
-             {
-                 id: "1",
-                 name: "Nanno",
-                 icon:"fa-hashtag",
-                 views: "375.6k views",
-                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
-             },
-             {
-                 id: "2",
-                 name: "loveu",
-                 icon:"fa-hashtag",
-                 views: "375.6k views",
-                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
-             },
-             {
-                 id: "3",
-                 name: "bts",
-                 icon:"fa-search",
-                 views: "375.6k views",
-                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
-             },
-             {
-                 id: "4",
-                 name: "into1",
-                 icon:"fa-search",
-                 views: "375.6k views",
-                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
-             },
-             {
-                 id: "5",
-                 name: "tothemoon",
-                 icon:"fa-music",
-                 views: "375.6k views",
-                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
-             }
-         ]
-        }
-    }
+    components:{
+
+    },
+    props:[
+        'name',
+        'views',
+        'caption'
+    ]
 }
 </script>
+
+
 <style>
 .hashtag_discover{
 }
