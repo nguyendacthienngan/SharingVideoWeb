@@ -36,7 +36,10 @@ export default {
     },
     methods:{
         onFormSubmit(e) {   
-            if(this.currentComment === "" || !this.isSendComment)  return
+
+            if(this.currentComment === "") {
+                return
+            }
             this.$router.push({
                 path: `/search/${this.currentID}`
             })
