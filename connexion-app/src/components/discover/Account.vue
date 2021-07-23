@@ -1,16 +1,16 @@
 <template>
     <div class="card non-border">
         <div class="card-header container bg-white non-border">
-            <PostCaption :name="name" :username="username" :caption="caption"></PostCaption>
+            <AccountDetail  isPost=false :avatar_img="avatar_img" :name="name" :username="username" :caption="caption"></AccountDetail>
         </div>
     </div>
 </template>
 <script>
-import PostCaption from '../home/PostCaption.vue'
+import AccountDetail from './AccountDetail.vue'
 export default {
     components:{
-        PostCaption
+        AccountDetail
     },
-    props:['name', 'username', 'caption', 'bg_music']
+    props:['avatar_img','name', 'username', 'caption', 'bg_music']
 }
 </script>

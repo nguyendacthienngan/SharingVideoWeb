@@ -55,61 +55,191 @@ import SearchBar from '../common/SearchBar.vue'
 export default {
   data(){
     return{
-      allUsers: [
-       {
-                   id: "1",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Frog"
+      allUsers:[
+        {
+                  id: "1",
+                  name: "Nguyễn Đắc Thiên Ngân",
+                  username: "@ndt_ngan",
+                  caption: "Heo Bối is my full name",
+                  avatar_img: "woman (1).png",
+                  bg_music: "Crazy Frog"
                },
                {
-                   id: "2",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Dog"
+                  id: "2",
+                  name: "Nguyễn Lê Bách",
+                  username: "@nl_bach",
+                  caption: "Bách bạch bạch bạch",
+                  avatar_img: "hipster.png",
+                  bg_music: "Crazy Frog"
                },
                {
                    id: "3",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Pig"
+                   name: "Chung Thái Dung",
+                   username: "@ct_dung",
+                   caption: "Solo không?",
+                   avatar_img: "woman (4).png",
+                   bg_music: "Crazy Frog"
                },
                {
                    id: "4",
-                   name: "INT01–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Cat"
+                   name: "Tân Hữu Toàn",
+                   username: "@th_toan",
+                   caption: "Hả gì, ai biết gì đâu",
+                   avatar_img: "man.png",
+                   bg_music: "Crazy Frog"
                },
                {
                    id: "5",
-                   name: "INT01–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
+                   name: "Nguyễn Chí Thành",
+                   username: "@nc_thanh",
+                   caption: "Hé lô cả nhà iu",
+                   avatar_img: "man (1).png",
                    bg_music: "Crazy Cat"
                },
                {
                    id: "6",
-                   name: "INT06–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
+                   name: "Phạm Ngọc Thịnh",
+                   username: "@pn_thinh",
+                   caption: ".",
+                   avatar_img: "man (3).png",
                    bg_music: "Crazy Cat"
                },
                {
                    id: "7",
-                   name: "INT07–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
+                   name: "Nguyễn Nhật Long",
+                   username: "@nn_long",
+                   caption: "Mình độc thân",
+                   avatar_img: "man (4).png",
                    bg_music: "Crazy Bear"
                },
                {
-                   id: "INTO8–刘宇",
-                   name: "INT08–刘宇",
-                   username: "@into1_liuyu_",
+                   id: "8",
+                   name: "Ung Bảo Tiên",
+                   username: "@ub_tien",
+                   caption: "Tiên Bảo Bảo",
+                   avatar_img: "woman.png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "9",
+                   name: "Trương Minh Hiếu",
+                   username: "@tm_hieu",
+                   caption: "Finn Trương",
+                   avatar_img: "hipster.png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "10",
+                   name: "Trần Phương Duy",
+                   username: "@tp_duy",
+                   caption: "Hiện đang làm việc tại Thegioididong",
+                   avatar_img: "man (3).png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "11",
+                   name: "Đinh Ngọc Uyên Phương",
+                   username: "@dnu_phuong",
+                   caption: "Thèm bún bò",
+                   avatar_img: "woman (2).png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "12",
+                   name: "Nguyễn Thị Quỳnh Ngân",
+                   username: "@ntq_ngan",
+                   caption: "Đặc Đặc, mama ai ni",
+                   avatar_img: "woman (3).png",
+                   bg_music: "Crazy Plant"
+               }
+      ],
+      suggestedAccounts: [
+                {
+                  id: "1",
+                  name: "INTO1–刘宇",
+                  username: "@into1_liuyu_",
+                  caption: "Super Cool",
+                  avatar_img: "Liuyu.png",
+                  bg_music: "Crazy Frog"
+               },
+               {
+                  id: "2",
+                  name: "INTO1-周柯宇",
+                  username: "@into1_daniel",
+                  caption: "Daniel 周柯宇",
+                  avatar_img: "ZhouKeYu.png",
+                  bg_music: "Crazy Frog"
+               },
+               {
+                   id: "3",
+                   name: "INTO1–林墨",
+                   username: "@into1_linmo_",
+                   caption: "Phi thường hoàn mỹ",
+                   avatar_img: "Momo.png",
+                   bg_music: "Crazy Frog"
+               },
+               {
+                   id: "4",
+                   name: "INT01–张嘉元",
+                   username: "@into1_zhangjiayuan_",
                    caption: "Super Cool",
+                   avatar_img: "ZhangJiaYuan.png",
+                   bg_music: "Crazy Frog"
+               },
+               {
+                   id: "5",
+                   name: "INT01–高卿尘",
+                   username: "@into1_nine_",
+                   caption: "Super Cool",
+                   avatar_img: "Nine.png",
+                   bg_music: "Crazy Cat"
+               },
+               {
+                   id: "6",
+                   name: "INT06–刘彰",
+                   username: "@into1_ak_",
+                   caption: "Super Cool",
+                   avatar_img: "AK.png",
+                   bg_music: "Crazy Cat"
+               },
+               {
+                   id: "7",
+                   name: "INT07–尹浩宇",
+                   username: "@into1_patrick_",
+                   caption: "Super Cool",
+                   avatar_img: "Patrick.png",
+                   bg_music: "Crazy Bear"
+               },
+               {
+                   id: "8",
+                   name: "INT01–米卡",
+                   username: "@into1_mika_",
+                   caption: "Super Cool",
+                   avatar_img: "Mika.png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "9",
+                   name: "INT08–赞多",
+                   username: "@into1_santa_",
+                   caption: "Super Cool",
+                   avatar_img: "Santa.png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "10",
+                   name: "INT08–力丸",
+                   username: "@into1_riki_",
+                   caption: "Super Cool",
+                   avatar_img: "Riki.png",
+                   bg_music: "Crazy Plant"
+               },
+               {
+                   id: "11",
+                   name: "INT08–伯远",
+                   username: "@into1_boyuan_",
+                   caption: "Super Cool",
+                   avatar_img: "BoYuan.png",
                    bg_music: "Crazy Plant"
                }
       ]

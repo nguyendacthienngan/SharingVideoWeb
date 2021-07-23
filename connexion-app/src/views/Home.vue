@@ -28,17 +28,24 @@ export default {
     },
     data(){
        return{
-         allUsers: []
+         allUsers: [],
+         suggestedAccounts: []
        }
     },
     methods:{
+       getSuggestedAccounts(){
+           this.suggestedAccounts = this.$refs.navbar.suggestedAccounts
+       },
         getAllUsers()
         {
             this.allUsers = this.$refs.navbar.allUsers
         }   
     },
     mounted(){
-         this.$nextTick(() => this.getAllUsers())
+         this.$nextTick(() => {
+            this.getAllUsers();
+            this.getSuggestedAccounts();
+         })
     }
 }
 </script>

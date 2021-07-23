@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="suggested-accounts">
-            <Accounts title="Suggested Accounts:"></Accounts>
+            <Accounts title="Suggested Accounts:" :suggestedAccounts="this.$parent.$data.suggestedAccounts"></Accounts>
         </div>
         <div class="discover">
             <!-- <Accounts title="Your Top Accounts:"></Accounts> -->
@@ -32,7 +32,7 @@ export default {
     components: {
         Accounts,
         Discover
-    },
+    }
 }
 </script>
 

@@ -1,13 +1,19 @@
 <template>
     <div class="d-flex" style="margin-top: 12px">
-        <img src="../../assets/images/into1/zhoukeyu.jpg" width="51px" height="51px" class="m-r-15" style="border-radius:50px">
+        <img :src="require(`../../assets/images/into1/${avatar_img}`)" width="51px" height="51px"  class="m-r-15" />
         <div>
         <div class="d-none d-lg-block">
-            <b>Into1 - Daniel </b>
+            <b>{{name}} </b>
             <br>
-            @into1_daniel  
+            {{username}}
         </div>
         
         </div>
     </div>
 </template>
+<script>
+
+export default {
+    props:['name','username','avatar_img']
+}
+</script>

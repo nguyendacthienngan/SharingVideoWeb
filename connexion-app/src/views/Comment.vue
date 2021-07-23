@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="card non-border">
                     <div class="card-header container bg-white ">
-                        <PostCaption name="INTO1–刘宇" username="@into1_liuyu_" caption="Relatively cool" bg_music="Crazy Frog"></PostCaption>
+                        <PostCaption  isPost="true"  avatar_img="Liuyu.png" name="INTO1–刘宇" username="@into1_liuyu_" caption="Relatively cool" bg_music="Crazy Frog"></PostCaption>
                         <router-link to="/" class="d-sm-none">
                             <span class="fa fa-times fa-2x exit-button"></span>
                         </router-link>

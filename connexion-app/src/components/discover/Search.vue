@@ -8,6 +8,7 @@
                 :username="a.username" 
                 :caption="a.caption" 
                 :bg_music="a.bg_music"
+                :avatar_img="a.avatar_img"
             >
                 
             </Account>
