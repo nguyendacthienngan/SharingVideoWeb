@@ -9,19 +9,19 @@
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 15px;
-    color: #FF0000;
-    border: 1px solid #FF0000;
+    color: #F14B4B;
+    border: 1px solid #F14B4B;
     margin: auto;
 }
 .post-button:hover{
     color: white;
     border: 1px solid transparent;
-    background-color: #FF0000;
+    background-color: #F14B4B;
 }
 .post-button:active{
     color: white;
     border: 1px solid transparent;
-    background-color: #FF0000;
+    background-color: #F14B4B;
 }
 
 /* .comment-bar .icon {
