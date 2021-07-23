@@ -26,7 +26,48 @@
 </template>
 <script>
 export default {
-    props: ['hashtag_name', 'hashtag_icon']
+    props: ['hashtag_name', 'hashtag_icon'],
+    data(){
+        return {
+            hashtags: [
+             {
+                 id: "1",
+                 name: "Nanno",
+                 icon:"fa-hashtag",
+                 views: "375.6k views",
+                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
+             },
+             {
+                 id: "2",
+                 name: "loveu",
+                 icon:"fa-hashtag",
+                 views: "375.6k views",
+                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
+             },
+             {
+                 id: "3",
+                 name: "bts",
+                 icon:"fa-search",
+                 views: "375.6k views",
+                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
+             },
+             {
+                 id: "4",
+                 name: "into1",
+                 icon:"fa-search",
+                 views: "375.6k views",
+                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
+             },
+             {
+                 id: "5",
+                 name: "tothemoon",
+                 icon:"fa-music",
+                 views: "375.6k views",
+                 caption: "Biến hình cùng hashtag #nanno thành nanno trong “Girl from nowhere” nào!"
+             }
+         ]
+        }
+    }
 }
 </script>
 <style>

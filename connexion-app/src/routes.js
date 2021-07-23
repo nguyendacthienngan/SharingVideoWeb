@@ -24,6 +24,7 @@ export const router = new VueRouter({
                 {path: '/search/:id', component: Search },
                 {path: '/search', component: Search },
                 {path: '/post', component: Posts },
+                {path: '/trending/:id', component: Trending},
                 {path: '/trending', component: Trending}
             ]
         },
