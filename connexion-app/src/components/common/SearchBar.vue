@@ -36,13 +36,17 @@ export default {
     },
     methods:{
         onFormSubmit(e) {   
-
-            if(this.currentComment === "") {
-                return
+            if (this.currentID >=1)
+            {
+                this.$router.push({
+                    path: `/search/${this.currentID}`
+                });
             }
+            else
             this.$router.push({
-                path: `/search/${this.currentID}`
-            })
+                    path: `/search`
+                });
+           
         },
         onUserSelected(user) {
             this.currentComment += user.username
@@ -57,6 +61,12 @@ export default {
                         this.isHidden = false
                         this.generateSuggestedUsernames(tempVal)
                         return
+                    }
+                    else
+                    {
+                        this.currentComment = val
+                        this.currentID = -1
+                        this.suggestedUsernames.current = -1
                     }
                 }
             }
@@ -74,10 +84,37 @@ export default {
         },
         onSelectAnotherUsername(e) {
             if(e.key === "Enter") {
-                if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
-                    this.currentComment =  this.suggestedUsernames.all[this.suggestedUsernames.current].username
-                    this.currentID =  this.suggestedUsernames.all[this.suggestedUsernames.current].id
-                    this.isSendComment = false
+                if(this.suggestedUsernames.current >= 0)
+                {
+                    if(this.suggestedUsernames.all[this.suggestedUsernames.current]) {
+                        this.currentComment =  this.suggestedUsernames.all[this.suggestedUsernames.current].username
+                        this.currentID =  this.suggestedUsernames.all[this.suggestedUsernames.current].id
+                        this.isSendComment = false
+                    }
+                    else
+                    {
+                        this.currentComment = ""
+                        this.currentID = -1
+                         this.suggestedUsernames.current = -1
+                    }
+                    
+
+                    if(e.key === "ArrowUp") this.suggestedUsernames.current --
+                    if(e.key === "ArrowDown") this.suggestedUsernames.current ++
+
+                    if(this.suggestedUsernames.current < 0) this.suggestedUsernames.current=2
+                    if(this.suggestedUsernames.current > 2) this.suggestedUsernames.current=0
+                    
+                    this.suggestedUsernames.all = this.suggestedUsernames.all.map((u, i) => {
+                        u.selected = i===this.suggestedUsernames.current
+                        return u
+                    })
+                }
+                else
+                {
+                    this.currentComment = ""
+                    this.currentID = -1
+                    this.suggestedUsernames.current = -1
                 }
                 if(this.isHidden)    this.isSendComment = true
                 else    this.isSendComment = false
@@ -86,17 +123,6 @@ export default {
                 return
             }
 
-
-            if(e.key === "ArrowUp") this.suggestedUsernames.current --
-            if(e.key === "ArrowDown") this.suggestedUsernames.current ++
-
-            if(this.suggestedUsernames.current < 0) this.suggestedUsernames.current=2
-            if(this.suggestedUsernames.current > 2) this.suggestedUsernames.current=0
-            
-            this.suggestedUsernames.all = this.suggestedUsernames.all.map((u, i) => {
-                u.selected = i===this.suggestedUsernames.current
-                return u
-            })
         }
     },
     mounted() {
@@ -107,7 +133,7 @@ export default {
            isHidden: true,
            isSendComment: false,
            currentComment: "",
-           currentID: 1,
+           currentID: -1,
            allUsernames: [
                { id: 1, username: "ndt_ngan" },
                { id: 2, username: "nl_bach" },
@@ -124,7 +150,7 @@ export default {
            ],
            suggestedUsernames: {
                all: [],
-               current: 0,
+               current: -1,
            }
         }
     }
