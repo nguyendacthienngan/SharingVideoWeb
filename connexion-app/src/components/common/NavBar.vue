@@ -177,38 +177,6 @@ export default {
                    caption: "Phi thường hoàn mỹ",
                    avatar_img: "Momo.png",
                    bg_music: "Crazy Frog"
-               },
-               {
-                   id: "4",
-                   name: "INT01–张嘉元",
-                   username: "@into1_zhangjiayuan_",
-                   caption: "Super Cool",
-                   avatar_img: "ZhangJiaYuan.png",
-                   bg_music: "Crazy Frog"
-               },
-               {
-                   id: "5",
-                   name: "INT01–高卿尘",
-                   username: "@into1_nine_",
-                   caption: "Super Cool",
-                   avatar_img: "Nine.png",
-                   bg_music: "Crazy Cat"
-               },
-               {
-                   id: "6",
-                   name: "INT06–刘彰",
-                   username: "@into1_ak_",
-                   caption: "Super Cool",
-                   avatar_img: "AK.png",
-                   bg_music: "Crazy Cat"
-               },
-               {
-                   id: "7",
-                   name: "INT07–尹浩宇",
-                   username: "@into1_patrick_",
-                   caption: "Super Cool",
-                   avatar_img: "Patrick.png",
-                   bg_music: "Crazy Bear"
                }
       ]
     }
