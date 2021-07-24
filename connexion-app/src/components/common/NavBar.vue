@@ -209,38 +209,6 @@ export default {
                    caption: "Super Cool",
                    avatar_img: "Patrick.png",
                    bg_music: "Crazy Bear"
-               },
-               {
-                   id: "8",
-                   name: "INT01–米卡",
-                   username: "@into1_mika_",
-                   caption: "Super Cool",
-                   avatar_img: "Mika.png",
-                   bg_music: "Crazy Plant"
-               },
-               {
-                   id: "9",
-                   name: "INT08–赞多",
-                   username: "@into1_santa_",
-                   caption: "Super Cool",
-                   avatar_img: "Santa.png",
-                   bg_music: "Crazy Plant"
-               },
-               {
-                   id: "10",
-                   name: "INT08–力丸",
-                   username: "@into1_riki_",
-                   caption: "Super Cool",
-                   avatar_img: "Riki.png",
-                   bg_music: "Crazy Plant"
-               },
-               {
-                   id: "11",
-                   name: "INT08–伯远",
-                   username: "@into1_boyuan_",
-                   caption: "Super Cool",
-                   avatar_img: "BoYuan.png",
-                   bg_music: "Crazy Plant"
                }
       ]
     }

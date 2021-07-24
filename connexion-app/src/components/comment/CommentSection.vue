@@ -7,7 +7,9 @@
                     :key="c.id" :name="c.name" 
                     :username="c.username" 
                     :caption="c.caption" 
-                    :bg_music="c.bg_music"></Comment>
+                    :bg_music="c.bg_music"
+                    :filename="c.filename"
+                    ></Comment>
             </div>
         </div>
         <div class="comment-section container"  style="position: relative">
@@ -210,59 +212,59 @@ export default {
            allComments: [
                {
                    id: "1",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Frog"
+                   name: "Daniel Zhou",
+                   username: "@chaukhavu",
+                   caption: "Đẹp quá ạ",
+                   bg_music: "Crazy Frog",
+                   filename:"employee.png"
                },
                {
                    id: "2",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Heo Bối",
+                   username: "@heoboi1505",
                    caption: "Super Cool",
-                   bg_music: "Crazy Dog"
+                   bg_music: "Crazy Dog",
+                   filename:"hipster.png"
                },
                {
                    id: "3",
-                   name: "INTO1–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Nguyễn Lê Bách",
+                   username: "@nlbach",
                    caption: "Super Cool",
-                   bg_music: "Crazy Pig"
+                   bg_music: "Crazy Pig",
+                   filename:"man.png"
                },
                {
                    id: "4",
-                   name: "INT01–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Chung Thái Dung",
+                   username: "@ctdung",
                    caption: "Super Cool",
-                   bg_music: "Crazy Cat"
+                   bg_music: "Crazy Cat",
+                   filename:"woman.png"
                },
                {
                    id: "5",
-                   name: "INT01–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Nguyễn Chí Thành",
+                   username: "@ncthanh",
                    caption: "Super Cool",
-                   bg_music: "Crazy Cat"
+                   bg_music: "Crazy Cat",
+                   filename:"man (1).png"
                },
                {
                    id: "6",
-                   name: "INT06–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Uyên Phương",
+                   username: "@dnuyenphuong",
                    caption: "Super Cool",
-                   bg_music: "Crazy Cat"
+                   bg_music: "Crazy Cat",
+                   filename:"man (2).png"
                },
                {
                    id: "7",
-                   name: "INT07–刘宇",
-                   username: "@into1_liuyu_",
+                   name: "Tôi là tôi",
+                   username: "@toilatoi?",
                    caption: "Super Cool",
-                   bg_music: "Crazy Bear"
-               },
-               {
-                   id: "INTO8–刘宇",
-                   name: "INT08–刘宇",
-                   username: "@into1_liuyu_",
-                   caption: "Super Cool",
-                   bg_music: "Crazy Plant"
+                   bg_music: "Crazy Bear",
+                   filename:"woman (4).png"
                }
            ],
            allUsernames: [

@@ -2,7 +2,7 @@
     <div class="">
         <div class="d-flex">
             <div class="avatar">
-                <img src="../../assets/images/Account.png" width="41px" height="41px">
+                <img :src="require(`../../assets/images/emchingan/${filename}`)" width="41px" height="41px" id="logo-img"/>
                 <br>
                 <div class="text-center">
                     <img src="../../assets/images/CheckBox-Icon.svg">
@@ -33,7 +33,7 @@
 <script>
 import $ from 'jquery'
 export default {
-    props:['name', 'username', 'caption', 'image'],
+    props:['name', 'username', 'caption', 'image','filename'],
     methods:{
         loveSVGFunction: function(e){
             e.currentTarget.classList.toggle('animate');
